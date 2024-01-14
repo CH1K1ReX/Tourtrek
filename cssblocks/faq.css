@@ -1,7 +1,10 @@
 .faq__block{
-    /* height: 758px; */
     display: grid;
     align-items: center;
+}
+
+.faq-container{
+    margin-bottom: 40px;
 }
 
 .faq-container h2{

@@ -4,15 +4,11 @@
 
 .prom-cards_cont{
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px 80px; */
 }
 
 .prom_card-cont{
-    /* background: rgb(181, 181, 181); */
     display: grid;
     grid-row-gap: 5px;
-    /* height: 270px; */
 }
 
 .prom_card_img{
@@ -28,10 +24,7 @@
 }
 
 .prom_card_description{
-    /* text-indent - отступ первой строки*/
-    /* text-indent: 50%; */
     position: relative;
-    /* width:300px; */
     white-space: nowrap;
     overflow: hidden;
 }

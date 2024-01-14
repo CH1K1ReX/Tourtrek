@@ -20,9 +20,6 @@ footer{
 .footer-cont{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /* display: flex;
-    justify-content: space-between; */
-    
 }
 
 .footer-cont__column-2{

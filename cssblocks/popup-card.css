@@ -13,7 +13,6 @@
     height: 100vh;
     width: 100%;
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
 }
 
 #popup_img{
@@ -26,7 +25,6 @@
 }
 
 .popup_text-cont{
-    /* background: red; */
     display: grid;
     grid-row-gap: 15px;
     padding-top: 20px;

@@ -1,7 +1,7 @@
 // вариант через импорт:
 // import cards from '../json/test.json' assert {type: 'json'};
 window.onload=function(){
-    let requestURL = '../json/cards-promotion.json';
+    let requestURL = '../json/news_cards.json';
     import_json_for_cards(requestURL)
     async function import_json_for_cards(requestURL){
         const request = new Request(requestURL);

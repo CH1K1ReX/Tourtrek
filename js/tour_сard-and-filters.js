@@ -202,9 +202,6 @@ function create_adap_tour_filter(obj, num){
             filter_b_cont.appendChild(filter_b_name);
         }
     }
-    ////////////////////////////////////////////////////////////////////
-    // filter_name.onclick = function(){open_adap_filter(num)};
-    ////////////////////////////////////////////////////////////////////
     let hr = document.createElement('hr');
     filter_cont.appendChild(hr);
 }
@@ -217,21 +214,3 @@ function open_block(id){
         filters.classList.remove('hide')
     }
 }
-// function open_adap_filter(num){
-    // let block_id = document.getElementById(`adap_filter_block_${num}`);
-    // if(){
-        // console.log(true);
-    // }else{
-        // document.getElementById(`adap_filter_block_${num}`).classList.remove('hide')
-        // console.log(false);
-    // }
-    // let a_f_name = document.getElementById(`adap_filter_name_${num}`);
-    // let a_f_block = document.getElementById(`adap_filter_block_${num}`);
-
-    //     if(a_f_block.classList.contains !== 'hide'){
-    //         a_f_block.classList.add('hide');
-    //     }else{
-    //         a_f_block.classList.remove('hide');
-    //     }
-
-// }
