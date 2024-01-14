@@ -1,0 +1,232 @@
+
+@media screen and (min-width:1500px), screen and (max-width:1499px){
+/*********************************head */
+    .block-cont__4-head{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+/*********************************head */
+/*********************************cards */
+    ._4-cards-cont{
+        display: flex;
+        justify-content: space-between;
+        /* grid-template-columns: repeat(4, 1fr); */
+        /* column-gap: 7%; */
+        /* grid-row-gap: 25px; */
+    }
+    .card-style p{
+        font-size: var(--header-adap-card_head_1);
+    }
+    .card-cont>:last-child{
+        font-size: var(--header-adap-card_desc_1);
+    }
+    /* .card-style{
+        height: 264px;
+        border-radius: 40px;
+    } */
+    /* .card-head{
+        height: 80px;
+        width: 80px;
+    } */
+    /* .card-head p{
+        font-size: var(--header-adap-h2_1);
+    } */
+    .card-1_3, .card-1_4, .card-2_3, .card-2_4{
+        display: none;
+    }
+/*********************************cards */
+}
+
+
+/*******************************************************************************************1200*/
+@media screen and (max-width:1200px){
+/*********************************head */
+/*********************************head */
+/*********************************cards */ 
+    .card-style p{
+        font-size: var(--header-adap-card_head_2);
+    }
+    .card-cont>:last-child{
+        font-size: var(--header-adap-card_desc_2);
+    }
+    /* .card-style{
+        height: 214px;
+    }
+    .card-head{
+        height: 70px;
+        width: 70px;
+    } */
+/*********************************cards */
+}
+
+/*******************************************************************************************1024*/
+@media screen and (max-width:1024px){
+/*********************************head */
+    /* .block-cont__4-head h2{
+        font-size: var(--header-adap-h2_2);
+        line-height: var(--header-adap-h2_2);
+    }
+    .block-cont__4-head p{
+        font-size: var(--header-adap-h4_2);
+        line-height: var(--header-adap-h4_2);
+    } */
+/*********************************head */
+/*********************************cards */
+    .card-style p{
+        font-size: var(--header-adap-card_head_3);
+    }
+    .card-cont>:last-child{
+        font-size: var(--header-adap-card_desc_3);
+    }
+    /* ._4-cards-cont{
+        flex-wrap: wrap;
+    } */
+/*********************************cards */
+}
+
+/********************************************************************************************768*/
+@media screen and (max-width:768px){
+    
+/*********************************head */
+    .block-cont__4-head{
+        display: grid;
+    }
+/*********************************head */
+/*********************************cards */
+    .card-style p{
+        font-size: var(--header-adap-card_head_3);
+    }
+    .card-cont>:last-child{
+        font-size: var(--header-adap-card_desc_3);
+    }
+    /* /* ._4-cards-cont{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 6%;
+    } */
+    .card-1_3, .card-2_3{
+        display: block;
+        margin-top: 20px;
+    }
+    .card-column_4{
+        display: none;
+    }
+/*********************************cards */
+/* 
+638 = 100%
+394 = x
+648x = 39 400
+x = 39400/648
+648 * 6 = 3888*-1 = 3940 -3888 = 5200
+60,
+
+150 + 94 + 150 = 394
+150 + 94 + 150 + 94 + 150 = 638
+638 - 450 = 188/2 = 94
+*/
+}
+
+@media screen and (max-width:600px){
+    .card-1_4, .card-2_4{
+        display: block;
+        margin-top: 20px;
+    }
+    .card-column_3{
+        display: none;
+    }
+}
+
+/********************************************************************************************480*/
+@media screen and (max-width:480px){
+/*********************************head */
+    /* .block-cont__4-head h2{
+        font-size: var(--header-adap-h2_2);
+        line-height: var(--header-adap-h2_2);
+    }
+    .block-cont__4-head p{
+        font-size: var(--header-adap-h4_2);
+        line-height: var(--header-adap-h4_2);
+    } */
+/*********************************head */
+/*********************************cards */
+    .card-style p{
+        font-size: var(--header-adap-card_head_4);
+    }
+    .card-cont>:last-child{
+        font-size: var(--header-adap-card_desc_4);
+    }
+    /* ._4-cards-cont{
+        grid-column-gap: 5%;
+        grid-row-gap: 15px;
+    }
+    .card-style{
+        height: 144px;
+        border-radius: 30px;
+        
+    }
+    .card-head{
+        height: 50px;
+        width: 50px;
+    } */
+    /* .card-cont p{
+        font-size: var(--header-adap-h3_2);
+    }
+    .card-head p{
+        font-size: var(--header-adap-h2_3);
+    } */
+    .card-1_4, .card-2_4{
+        display: none;
+    }
+    .card-column_3{
+        display: block;
+    }
+    /*********************************cards */
+}
+
+@media screen and (max-width:480px){
+        .card-1_4, .card-2_4{
+            display: block;
+        }
+        .card-column_3{
+            display: none;
+        }
+}
+/********************************************************************************************320*/
+@media screen and (max-width:320px){
+/*********************************head */
+    /* .block-cont__4-head h2{
+        font-size: var(--header-adap-h2_3);
+        line-height: var(--header-adap-h2_3);
+    }
+    .block-cont__4-head p{
+        font-size: var(--header-adap-h4_3);
+        line-height: var(--header-adap-h4_3);
+    } */
+/*********************************head */
+/*********************************cards */
+    .card-style p{
+        font-size: var(--header-adap-card_head_5);
+    }
+    .card-cont>:last-child{
+        font-size: var(--header-adap-card_desc_5);
+    }
+    /* ._4-cards-cont{
+        grid-column-gap: 4%;
+        grid-row-gap: 10px;
+    }
+    .card-style{
+        height: 104px;
+        border-radius: 20px;
+    }
+    .card-head{
+        height: 40px;
+        width: 40px;
+    } */
+    /* .card-cont p{
+        font-size: var(--header-adap-h3_3);
+    }
+    .card-head p{
+        font-size: var(--header-adap-h3_2);
+    } */
+/*********************************cards */
+}

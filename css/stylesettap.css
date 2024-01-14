@@ -1,0 +1,93 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: 0;
+    color: var(--black_color);
+} 
+
+html{
+    --white_color: #ffffff;
+    --black_color: #222222;
+    --blue_color: #3262E0;
+
+    --gray_color:#b9b9b9;
+    --blackgray_color:#959595;
+    --shadow_color: rgba(82, 82, 82, 0.1);
+
+    --header_1: 50px; /*Bold*/
+    --header_2: 24px; /*Medium*/
+    --header_3: 16px; /*Regular*/
+    --header_4: 12px; /*Regular*/
+    --header_5: 10px; /*Regular*/
+
+    --header_space: 2px;
+
+/**********************************************adaptive*/
+    --header-adap-h1_1: 50px;
+    --header-adap-h1_2: 40px;
+    --header-adap-h1_3: 35px;
+
+    --header-adap-h2_1: 24px;
+    --header-adap-h2_2: 20px;
+    --haeder-adap-h2_3: 16px;
+
+    --header-adap-h3_1: 16px;
+    --header-adap-h3_2: 14px;
+    --header-adap-h3_3: 12px;
+
+    --header-adap-h4_1: 12px;
+    --header-adap-h4_2: 11px;
+    --header-adap-h4_3: 10px;
+
+    --header-adap-h5_1: 10px;
+    --header-adap-h5_2: 8px;
+
+    --header-adap-card_head_1:22px;
+    --header-adap-card_head_2:21px;
+    --header-adap-card_head_3:16px;
+    --header-adap-card_head_4:14px;
+    --header-adap-card_head_5:12px;
+    /* --header-adap-card_head_5:14px; */
+
+    --header-adap-card_desc_1:16px;
+    --header-adap-card_desc_2:14px;
+    --header-adap-card_desc_3:12px;
+    --header-adap-card_desc_4:10px;
+    --header-adap-card_desc_5:8px;
+/******************************************************/
+    
+    --weight_bold: "Rubik Bold";
+    --weight_medium: "Rubik Medium";
+    --weight_regular: "Rubik Regular";
+    --weight_light: "Rubik Light";
+
+    --res_mobile:320px; /*320-480*/
+    --res_tablet:481px; /*481-768*/
+    --res_laptop:769px; /*769-1024*/
+    --res_pc:1025; /*1025-1200*/
+    --res_tv:1201; /*1200<*/
+
+    font-family: "Rubik Regular";
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url(../font/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Rubik Medium";
+    src: url(../font/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Rubik Regular";
+    src: url(../font/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url(../font/Rubik-Light.ttf);
+}

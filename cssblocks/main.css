@@ -1,0 +1,139 @@
+main{
+    width: 100%;
+}
+
+/*******************************************************************************************block-1*/
+.main-cont__block-1{
+    height: 1000px;
+    background: var(--blue_color);
+}
+
+.main-cont__block-1 h1, .main-cont__block-1 p{
+    color: var(--white_color);
+}
+
+.block-cont__1{
+    display: grid;
+}
+
+
+/*********************************row gap */
+.block-cont__1__h{
+    row-gap: 50px;
+}
+
+.block-cont__1{
+    row-gap: 15px;
+}
+
+.block-cont__1__h__btn{
+    row-gap: 10px;
+}
+/*******************************************************************************************block-1*/
+/*******************************************************************************************block-2*/
+.main-cont__block-2{
+    /* height: 1000px; */
+    background: var(--black_color);
+}
+/*******************************************************************************************block-2*/
+/*******************************************************************************************block-3*/
+.block-cont__3{
+    display: flex;
+    align-items: center;
+}
+
+.block-cont__3 h2, .block-cont__3 p{
+        color: var(--white_color);
+}
+
+.block-cont__3-office{
+    background-image: url(../img/office.png);
+/*войство CSS определяет, фиксируется ли положение фонового изображения в области просмотра или прокручивается вместе с содержащимся в нем блоком.background-attachment*/
+/* background-attachment: fixed; */
+
+}
+/*******************************************************************************************block-3*/
+/*******************************************************************************************block-4*/
+.main-cont__block-4{
+    margin: 70px 0;
+}
+
+/**********************************/
+.block-cont__4-head{
+    margin-bottom: 30px;
+    row-gap: 5px;
+}
+
+.card-cont p{
+    text-align: center;
+}
+
+.block-cont__4-head p{
+    text-decoration: underline;
+}
+
+.card_under-head{
+    margin-top: 5px;
+}
+
+.card-column-cont>:first-child{
+    margin-bottom: 20px;
+}
+
+.card-style div{
+    background: var(--white_color);
+    font-family: var(--weight_bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    box-shadow: 0px 2px 4px 0px var(--shadow_color);
+}
+
+/****************************************card image city*/
+.card_MO{
+    background: url(../img/moscow.jpg);
+}
+.card_KP{
+    background: url(../img/Krasnodar.jpg);
+}
+.card_SP{
+    background: url(../img/Sankt-Peterburg.jpg);
+}
+.card_AC{
+    background: url(../img/Astrahan.jpg);
+}
+.card_YAR{
+    background: url(../img/Yaroslav.jpg);
+}
+.card_KA{
+    background: url(../img/Kaliningrad.jpg);
+}
+.card_CO{
+    background: url(../img/Sochi.jpg);
+}
+.card_BH{
+    background: url(../img/Great_Novgorod.jpg);
+}
+
+.card-style{
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/****************************************card image city*/
+/*******************************************************************************************block-4*/
+/*******************************************************************************************block-4*/
+/*******************************************************************************************block-5*/
+/* .main-cont_block-5{
+    margin-top: 150px;
+} */
+/*******************************************************************************************block-5*/
+/*******************************************************************************************block-6*/
+/*******************************************************************************************block-6*/
+
+
+
+

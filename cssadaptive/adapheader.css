@@ -1,0 +1,207 @@
+/* @media - способ обращения к каскадным таблицам */
+/* screen - обращение к экрану (по факту ко всему тому, что видно гостю сайта и через компьютер и через мобильный телефон) */
+/* and - по сути то что является логикой, обозначая и и соединяя.
+ Например: каскадные страницы, обращаюсь к экрану и чему либо, чтобы вы выполнили функцию... */
+/* (media querer selector) - самые классические это max and min*/
+/* {css} - внутри написан нормальный css, но он будет работать только в условии media */
+/* если не будет обращения, то по умолчанию будет обращаться как all - ко всем элементам */
+/* Важно - media должно быть в самом внизу, потому что, если не будет написан сверху обращение к элементу, медия просто не будет работать с этим обращенным медия до */
+/* 
+orientation: landscape; - по вертикали
+protrait - портретный ориентация (по вертикали)
+*/
+/* , - будет работать как логическое ИЛИ */
+
+
+
+
+/* --res_mobile: 320-480 */
+/* --res_tablet:481-768 */ 
+/* --res_laptop:769-1024 */ 
+/* --res_pc:1025-1200 */
+/* --res_tv:1200< */ 
+
+@media screen and (min-width:1500px){
+    /* .navbar-tour{
+        width: 240px;
+        left:9vw;
+    } */
+    .navbar-1500{
+        display: none;
+    }
+    .navbar-1200{
+        display: none;
+    }
+    .navbar-1024{
+        display: none;
+    }
+    .navbar-768{
+        display: none;
+    }
+    .navbar-480{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1499px){
+    /* .navbar-tour{
+        width: 240px;
+        left:9vw;
+    } */
+    .link-news{
+        display: none;
+    }
+    .link-contacts{
+        display: none;
+    }
+    .navbar-1500{
+        display: grid;
+    }
+    .navbar-1200{
+        display: none;
+    }
+    .navbar-1024{
+        display: none;
+    }
+    .navbar-768{
+        display: none;
+    }
+    .navbar-480{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1200px){
+    /* .navbar-tour{
+        width: 240px;
+        left: 9vw;
+    } */
+    .link-promotion{
+        display: none;
+    }
+    .navbar-1500{
+        display: none;
+    }
+    .navbar-1200{
+        display: block;
+    }
+    .navbar-1024{
+        display: none;
+    }
+    .navbar-768{
+        display: none;
+    }
+    .navbar-480{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1024px){
+    /* .navbar-tour{
+        width: 240px;
+    } */
+    .link-company{
+        display: none;
+    }
+    .navbar-1500{
+        display: none;
+    }
+    .navbar-1200{
+        display: none;
+    }
+    .navbar-1024{
+        display: grid;
+    }
+    .navbar-768{
+        display: none;
+    }
+    .navbar-480{
+        display: none;
+    }
+    /* .navbar-menu{
+        margin: 10px 20px 0;
+    } */
+}
+
+@media screen and (max-width:768px){
+    .navbar-tour{
+        display: none;
+    }
+    .header-cont__button-tour{
+        display: none;
+    }
+    /* .header-cont__basket{
+        display: block;
+    } */
+    .navbar-1500{
+        display: none;
+    }
+    .navbar-1200{
+        display: none;
+    }
+    .navbar-1024{
+        display: none;
+    }
+    .navbar-768{
+        display: grid;
+    }
+    .navbar-480{
+        display: none;
+    }
+    /* .navbar-menu{
+        margin: 10px 55px 0;
+    } */
+    
+}
+
+@media screen and (max-width:480px){
+    .header-cont__phoneback{
+        display: none;
+    }
+    .navbar-1500{
+        display: none;
+    }
+    .navbar-1200{
+        display: none;
+    }
+    .navbar-1024{
+        display: none;
+    }
+    .navbar-768{
+        display: none;
+    }
+    .navbar-480{
+        display: grid;
+    }
+    /* .navbar-menu{
+        margin: 10px 20px 0;
+    } */
+}
+
+@media screen and (max-width:320px){
+    /* .header-cont__phoneback{
+        display: none;
+    } */
+    .header-cont__basket{
+        display: none;
+    }
+    .navbar-1500{
+        display: none;
+    }
+    .navbar-1200{
+        display: none;
+    }
+    .navbar-1024{
+        display: none;
+    }
+    .navbar-768{
+        display: none;
+    }
+    .navbar-480{
+        display: grid;
+    }
+    /* .navbar-menu{
+        margin: 10px 10px 0;
+    } */
+}
+

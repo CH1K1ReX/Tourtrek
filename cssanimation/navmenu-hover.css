@@ -1,0 +1,23 @@
+.navbar-1500:hover .navbar-menu-1500{
+    display: block;
+}
+
+.navbar-1200:hover .navbar-menu-1200{
+    display: block;
+}
+
+.navbar-1024:hover .navbar-menu-1024{
+    display: block;
+}
+
+.navbar-768:hover .navbar-menu-768{
+    display: block;
+}
+
+.navbar-480:hover .navbar-menu-480{
+    display: block;
+}
+
+.navbar-tour:hover .navbar-tour-menu{
+    display: block;
+}

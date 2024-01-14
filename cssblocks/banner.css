@@ -1,0 +1,59 @@
+.block-1-gradient{
+    background: var(--white_color);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(50,98,224,0.75) 100%);
+}
+
+.block-cont__1{
+    height: 585px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: flex-end;
+}
+
+.block-cont__1 p{
+    display: flex;
+}
+
+/******************/
+.block-cont__1 div{
+    display: grid;
+    grid-row-gap: 15px;
+}
+/******************/
+
+
+.block-cont__1 h1, .block-cont__1 p, .block-cont__1 a{
+    color: var(--white_color);
+}
+
+.main-cont__block-2{
+    height: 463px;
+}
+
+/*****************************************************Position***/
+.pos-ban-tour{
+    background: url(../img/banner-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pos-ban-prom{
+    background: url(../img/banner-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 54%;
+}
+
+.pos-ban-news{
+    background: url(../img/banner-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+}
+/****************************************************************/
+/****************************************************blue banner*/
+.blue-banner{
+    background: var(--blue_color);
+}
+/****************************************************blue banner*/
+

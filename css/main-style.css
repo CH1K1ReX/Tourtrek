@@ -1,0 +1,25 @@
+@import url(stylesettap.css);
+@import url(stylesetting.css);
+
+/* blocks css */
+@import url(../cssblocks/header.css);
+@import url(../cssblocks/main.css);
+@import url(../cssblocks/faq.css);
+@import url(../cssblocks/form.css);
+@import url(../cssblocks/footer.css);
+
+/* animation css*/
+@import url(../cssanimation/navmenu-hover.css);
+
+/* adaptive css */
+@import url(../cssadaptive/adapheader.css);
+@import url(../cssadaptive/adapmainbanner.css);
+@import url(../cssadaptive/adapoffice.css);
+@import url(../cssadaptive/adapcity.css);
+@import url(../cssadaptive/adapfaq.css);
+@import url(../cssadaptive/adapform.css);
+@import url(../cssadaptive/adapfooter.css);
+@import url(../cssadaptive/adapMargPadd.css);
+@import url(../cssadaptive/adap-font.css);
+@import url(../cssadaptive/adap-ui.css);
+

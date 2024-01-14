@@ -1,0 +1,73 @@
+.ins_c_head{
+    padding: 150px 0;
+    text-align: center;
+}
+.ins_c_head h1{
+    margin-bottom: 40px;
+}
+
+.ins_c_block{
+    display: flex;
+    justify-content: space-between;
+}
+.ins_c_b_container{
+    height: 550px;
+    width: 300px;
+    border: 1px solid var(--gray_color);
+    display: grid;
+    grid-template-rows: 80px 80px 100px 1fr 40px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+
+.ins_c_b_container button{
+    border: none;
+    border-radius: 100px;
+    height: 25px;
+    background: var(--blue_color);
+    color: var(--white_color);
+    font-family: var(--weight_medium);
+    padding: 5px 30px;
+    display: flex;
+}
+
+.basket-block{
+    margin: 100px 0 40px;
+}
+
+.basket_cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.basket_c_block>:first-child{
+    margin-bottom: 15px;
+}
+
+.basket_c_form form{
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.basket_btn-style{
+    margin-top: 20px;
+    border: none;
+    border-radius: 100px;
+    height: 40px;
+    background: var(--blue_color);
+    color: var(--white_color);
+    font-size: var(--header_3);
+    font-family: 'Rubik Regular';
+}
+
+.basket_inp-style{
+    height: 40px;
+    border: 1px solid var(--black_color);
+    padding: 0 16px;
+    border-radius: 100px;
+    font-size: var(--header_3);
+    font-family: 'Rubik Regular';
+}

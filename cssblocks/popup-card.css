@@ -1,0 +1,41 @@
+#popup{
+    position: fixed;
+    top: 0;
+}
+.popup-container_background{
+    background: rgb(255, 255, 255, 0.60);
+    backdrop-filter: blur(4px);
+    width: 100vw;
+}
+
+.popup-cont{
+    background: var(--white_color);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+#popup_img{
+    background-position: center;
+    background-size: cover;
+}
+
+.popup_information-cont{
+    margin: 20px;
+}
+
+.popup_text-cont{
+    /* background: red; */
+    display: grid;
+    grid-row-gap: 15px;
+    padding-top: 20px;
+    margin-right: 40px;
+}
+
+.popup_x{
+    text-align: end;
+}
+.popup_x img{
+    width: 20px;
+}

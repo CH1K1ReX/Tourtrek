@@ -1,0 +1,28 @@
+@import url(stylesettap.css);
+@import url(stylesetting.css);
+
+/* animation css */
+@import url(../cssanimation/navmenu-hover.css);
+
+/* blocks css */
+@import url(../cssblocks/header.css);
+@import url(../cssblocks/banner.css);
+@import url(../cssblocks/basket.css);
+@import url(../cssblocks/contact.css);
+@import url(../cssblocks/promotion-cards.css);
+@import url(../cssblocks/tour.css);
+@import url(../cssblocks/form.css);
+@import url(../cssblocks/popup-card.css);
+@import url(../cssblocks/footer.css);
+
+/* css adaptive */
+@import url(../cssadaptive/adap-font.css);
+@import url(../cssadaptive/adap-ui.css);
+@import url(../cssadaptive/adapMargPadd.css);
+@import url(../cssadaptive/adapheader.css);
+@import url(../cssadaptive/adapbanner.css);
+@import url(../cssadaptive/adap_contact.css);
+@import url(../cssadaptive/adap_tour.css);
+@import url(../cssadaptive/adapform.css);
+@import url(../cssadaptive/adap_popup-card.css);
+@import url(../cssadaptive/adapfooter.css);

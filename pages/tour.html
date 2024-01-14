@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акции</title>
+    <link rel="stylesheet" href="../css/template-style.css">
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <div class="main-container">
+<!------------------------------------------------------------------>
+            <div class="main-cont__block-1 pos-ban-tour">
+                <div class="block-1-gradient">
+                    <div class="block-cont__1 style-margin style-padding">
+                        <p><a href="/main.html">Главная</a>&nbsp;- Туры</p>
+                        <div>
+                            <p class="p-header_5">Только лучшие туры, по низкой цене</p>
+                            <h1>Туры по России</h1> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+<!---------------------------------------------------------json----->
+            <div id="tour">
+                <div class="tour-container style-margin style-padding">
+                    <div class="tour-cont">
+                        <div class="tour_adap-cont">
+<!----------------------------------------------------------adap block -->
+                            <div class="tour-adap_buttons-blocks">
+                                <div class="t-a_b_block-1" onclick="open_block('adap_filter_result')">
+                                    <img src="../svg/filter-ui.svg" alt="filter-ui">
+                                    <p class="blue-color p-header_3">Фильтры</p>
+                                </div>
+                                <div class="t-a_b_block-2"><img src="../svg/blue-search-ui.svg" alt="search" onclick="open_block('adap_filter_search')"></div>
+                            </div>
+                            <div class="tour-adap_filter-block hide" id="adap_filter_result">
+                                <div class="t-a_f_cont">
+                                    <hr>
+                                    <p class="t-a_f_c_name" id="adap_filter_name" onclick="open_block('filter_order')">Сортировка</p>
+                                    <div class="hide" id="filter_order">
+                                        <div class="t-a_f_c_order">
+                                            <span>Порядок: сперва старые</span>
+                                            <span>Порядок: сперва новые</span>
+                                            <span>Цена: по возрастанию</span>
+                                            <span>Цена: по убыванию</span>
+                                            <span>Название: А-Я</span>
+                                            <span>Название: Я-А</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <hr>
+                                </div>
+                                <!-- <div class="t-a_f_cont">
+                                    <p class="t-a_f_c_name">Цена</p>
+                                    <div></div>
+                                    <hr>
+                                </div> -->
+                                <!-- <div class="t-a_f_cont">
+                                    <p class="t-a_f_c_name">Подборка</p>
+                                    div class"t-a_f_checkboxs-container""
+                                    <div class="t-a_f_c_chs-c_cont">
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Активные туры</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Гастрономический тур</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Необычные туры</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Обзорная</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Отдых с детьми</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Тур с животными</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры для выходного дня</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры для детей</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры для пенсионеров</p>
+                                        </div>
+                                        <div class="t-a_f_c_chs_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры на термальные источники</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="t-a_f_cont">
+                                    <p class="t-a_f_c_name">Подборка</p>
+                                    <div class="t-a_f_c_container-cont">
+                                        <div class="t-a_f_c_c_cont">
+                                            <p>Активные туры</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div> -->
+                            </div>
+                            <div class="tour-adap_search-block hide" id="adap_filter_search">
+                                <div class="tour-adap_s-b-cont">
+                                    <input type="text">
+                                    <div><img src="../svg/search-ui.svg" alt="search-ui"></div>
+                                </div>
+                            </div>
+                        </div>
+<!----------------------------------------------------------adap block -->
+
+                        <div class="tour_list-cont">
+                            <div class="tour_list_search">
+                                <input type="text" name="search" placeholder="Поиск...">
+                                <div><img src="../svg/search-ui.svg" alt="search"></div>
+                            </div>
+                            <div class="tour_list_order">
+                                <p>Порядок: по умолчанию</p>
+                                <div><img src="../svg/tringle.svg" alt="tringle"></div>
+                            </div>
+                        </div>
+                        <div class="tour_content-cont">
+                            <div class="tour_filters" id="filter_result">
+                                <div></div>
+                                <!-- <div class="tour_filter-cont">
+                                    <p class="header-3 blue-color">Подборка</p>
+                                    <div class="t_f_checkboxs-cont">
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Активные туры</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Гастрономический тур</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Необычные туры</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Обзорная</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Отдых с детьми</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Тур с животными</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры для выходного дня</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры для детей</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры для пенсионеров</p>
+                                        </div>
+                                        <div class="t_f_checkbox">
+                                            <input type="checkbox">
+                                            <p>Туры на термальные источники</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="tour_filter-cont">
+                                    <p class="header-3 blue-color medium">Подборка</p>
+                                    <div class="t_f_container">
+                                        <div class="t_f_c_text">
+                                            <p>Гастрономический тур</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="tour_cards" id="card_tour_result">
+                                <!-- <div class="tour_card-cont">
+                                    <div class="tour_card_img"></div>
+                                    <p class="t_p-header_1 medium">Тур по Краснодару</p>
+                                    <div class="tour_card_block-cont">
+                                        <div class="tour_card_price-cont">
+                                            <p>
+                                                <span class="t_p-header_2">99 999 р.</span>
+                                                <span class="t_p-header_3 blue-color">за 1 чел.</span>
+                                            </p>
+                                        </div>
+                                        <div class="tour_card_buttons">
+                                            <button class="t_p-header_3  medium">Забронировать</button>
+                                            <button class="t_p-header_3  medium">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!------------------------------------------------------------------>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="../js/import-main.js"></script>
+    <script src="../js/tour_сard-and-filters.js"></script>
+    <!-- <script src="../js/filter-tour.js"></script> -->
+</body>
+</html>

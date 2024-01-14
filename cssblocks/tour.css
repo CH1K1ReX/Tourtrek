@@ -1,0 +1,236 @@
+#tour{
+    margin: 40px 0;
+}
+.tour-cont{
+    display: grid;
+}
+
+.tour_content-cont{
+    /* height: 100px; */
+    /* background: whitesmoke; */
+    margin-top: 40px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 2fr; */
+
+}
+
+.tour_list-cont{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+/************************************************search*/
+.tour_list_search{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--black_color);
+}
+
+.tour_list_search input{
+    height: 25px;
+    width: 220px;
+    border: none;
+    padding-left: 10px;
+    font-size: var(--header_4);
+    font-family: "Rubik Regular";
+}
+
+.tour_list_search div{
+    height: 25px;
+    width: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid black;
+}
+
+.tour_list_search img{
+    height: 16px;
+}
+/************************************************search*/
+/************************************************order**/
+.tour_list_order{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--black_color);
+}
+
+.tour_list_order p{
+    font-size: var(--header_4);
+    width: 220px;
+    padding-left: 10px;
+}
+
+.tour_list_order div{
+    height: 25px;
+    width: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.tour_list_order img{
+    height: 6px;
+}
+/************************************************order**/
+/************************************************filters**/
+
+.tour_filter-cont{
+    display: grid;
+    grid-row-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.t_f_checkboxs-cont, .t_f_container{
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.t_f_checkbox{
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.t_f_checkbox p, .t_f_c_text p{
+    color: var(--blue_color);
+    font-size: var(--header_4);
+}
+/************************************************filters**/
+/************************************************tour card**/
+.tour_cards{
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-column-gap: 15px; */
+}
+
+.tour_card-cont{
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.tour_card_img{
+    height: 276px;
+    /* width: 276px; */
+    background: url(../img/Astrahan.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.tour_card_block-cont{
+    display: grid;
+    grid-row-gap:5px;
+}
+
+/* .tour_card_buttons {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.tour_card_buttons button{
+    border: none;
+}
+
+.tour_card_buttons>:first-child{
+    background: var(--blue_color);
+    color: var(--white_color);
+    border-radius: 100px;
+}
+.tour_card_buttons>:last-child{
+    background: var(--white_color);
+}
+
+.tour_card_price-cont p{
+    display: flex;
+    gap: 7px;
+    align-items: baseline;
+}
+/************************************************tour card**/
+
+/************************************************adap filter*/
+.tour_adap-cont img{
+    height: 16px;
+}
+.tour_adap-cont p{
+    color: var(--blue_color);
+}
+.tour_adap-cont{
+    display: grid;
+    grid-row-gap: 20px;
+}
+/* .tour-adap_buttons-blocks{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.t-a_b_block-1{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.t-a_b_block-2{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tour-adap_filter-block hr{
+    border: none; /* Убираем границу для браузера Firefox */
+    color: var(--blue_color); /* Цвет линии для остальных браузеров */
+    background-color: var(--blue_color); /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+}
+
+.tour-adap_filter-block p, .tour-adap_filter-block span{
+    font-size: var(--header_4);
+    color: var(--blue_color);
+}
+
+.t-a_f_c_name{
+    padding: 10px 0 ;
+    font-family: var(--weight_medium);
+}
+
+.t-a_f_c_b_chs-cont, .t-a_f_c_order, .t-a_f_c_b_c_text-cont{
+    margin: 10px 0;
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+
+.t-a_f_c_chs_checkbox{
+    display: flex;
+    align-items: start;
+    gap:5px;
+}
+
+.tour-adap_s-b-cont{
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    border: 1px solid var(--black_color);
+}
+
+.tour-adap_s-b-cont input{
+    border: none;
+}
+
+.tour-adap_s-b-cont div{
+    height: 25px;
+    width: 25px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-left: 1px solid var(--black_color);
+}
+
+
+
+
+/************************************************adap filter*/
+
+

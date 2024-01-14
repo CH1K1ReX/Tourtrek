@@ -1,0 +1,48 @@
+#form{
+    background: url(../img/form.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container{
+    height: 1000px;
+    display: grid;
+    align-items: center; 
+}
+
+.form{
+    display: grid;
+}
+
+.textarea-style, .input-style{
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.form-header{
+    margin-bottom: 40px;
+}   
+
+.form-header>:first-child{
+    margin-bottom: 20px;
+}
+
+.form-message{
+    margin-bottom: 40px;
+}
+
+.form>:last-child{
+    margin-top: 20px;
+}
+
+.input-style{
+    height: 40px;
+}  
+.textarea-style{
+    height: 185px;
+}
+
+
+
+
+
