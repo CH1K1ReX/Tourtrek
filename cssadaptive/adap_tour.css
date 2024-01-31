@@ -5,12 +5,15 @@
         grid-template-columns: 1fr 3fr;
     }
     /******************************Filter */
+    /* .tour_filters{
+        display:block;
+    } */
     /******************************Filter */
     /******************************Tour cards */ 
     .tour_cards{
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 15px;
-        grid-row-gap: 15px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
     }
 
     .tour_card_buttons button{
@@ -41,7 +44,7 @@
     .tour_cards{
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 15px;
-        grid-row-gap: 20px;
+        /* grid-row-gap: 20px; */
     }
     /******************************Tour cards */ 
     }
@@ -49,6 +52,10 @@
     /*******************************************************************************************1024*/
     @media screen and (max-width:1024px){
     /******************************Tour cards */ 
+    /* .tour_cards{ */
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* grid-column-gap: 5px; */
+    /* } */
     /******************************Tour cards */ 
     }
     
@@ -67,7 +74,7 @@
     /******************************Filter */
     /******************************Tour cards */ 
     .tour_cards{
-        grid-column-gap: 15px;
+        /* grid-column-gap: 15px; */
         grid-row-gap: 30px;
     }
     /******************************Tour cards */ 

@@ -1,4 +1,8 @@
+let c_bas = 0;
+
 window.onload = function(){
+    Delete_save();
+    checkBasket();
     let requestURL = '../json/cards-tour.json';
     let requestURL_filter = '../json/filters-tour.json';
 
@@ -20,24 +24,58 @@ window.onload = function(){
         const tour_filters = await response.json(); 
         for(let i = 0; i<tour_filters.length; i++){
             create_tour_filter(tour_filters, i);
-            create_adap_tour_filter(tour_filters, i)
+            create_adap_tour_filter(tour_filters, i);
         }
     }
 
     window.onclick=function(event){
-        let adap_filters = document.querySelectorAll('.t-a_f_cont')
+        let adap_filters = document.querySelectorAll('.t-a_f_cont');
+        let tour_cards = document.querySelectorAll('.tour_card-cont');
         for(let i = 0; i<adap_filters.length; i++){
             let a_f_name = document.getElementById(`adap_filter_name_${i}`);
-            let a_f_block = document.getElementById(`adap_filter_block_${i}`) 
+            let a_f_block = document.getElementById(`adap_filter_block_${i}`);
             if(event.target === a_f_name){
+                console.log(event.target);
                 if(!a_f_block.classList.contains('hide')){
-                    a_f_block.classList.add('hide')
+                    a_f_block.classList.add('hide');
                 }else{
-                    a_f_block.classList.remove('hide')
+                    a_f_block.classList.remove('hide');
                 }
-            }
+            }else{continue}
         }
-    }   
+        for(let i = 1; i<=tour_cards.length; i++){
+            let tour_img_id = document.getElementById(`tour_img_id_${i}`);
+            let tour_name_id = document.getElementById(`tour_name_id_${i}`);
+            let tour_book_id = document.getElementById(`tour_book_id_${i}`);
+            let tour_details_id = document.getElementById(`tour_details_id_${i}`);
+            if(event.target === tour_img_id || event.target === tour_name_id || event.target === tour_details_id){
+                import_json_for_card_tours(requestURL, i-1)
+                window.location.href = "../html/tour-page.html";
+                console.log(i);
+            }
+            else if(event.target === tour_book_id){
+                import_json_for_book(requestURL, i-1, c_bas)
+            }else{continue};
+        }
+    }  
+    async function import_json_for_card_tours(requestURL, num){
+        const request = new Request(requestURL);
+        const response = await fetch(request);
+        const cards = await response.json(); 
+        // if(event !== document.getElementById(`tour_book_id_${num_i}`)){
+        Save(cards, num);
+            // console.log(false);
+        // }else if(event === document){
+            // console.log(true);
+        // }
+        
+    } 
+    async function import_json_for_book(requestURL, num, basket){
+        const request = new Request(requestURL);
+        const response = await fetch(request);
+        const cards = await response.json(); 
+        Book(cards, num, basket);
+    }
 }
 
 function create_tour_card(obj, num){
@@ -68,6 +106,13 @@ function create_tour_card(obj, num){
     tour_block_buttons.classList.add('tour_card_buttons');
     tour_b_b_btn_book.classList.add('t_p-header_3', 'medium');
     tour_b_b_btn_details.classList.add('t_p-header_3', 'medium');
+////////////////////////////////////////////////////////////////////
+    tour_img.setAttribute('id', `tour_img_id_${obj[num].id}`);
+    tour_name.setAttribute('id', `tour_name_id_${obj[num].id}`);
+    tour_b_b_btn_book.setAttribute('id', `tour_book_id_${obj[num].id}`);
+    tour_b_b_btn_details.setAttribute('id', `tour_details_id_${obj[num].id}`);
+
+    // tour_b_b_btn_details.setAttribute('onclick', `info_button(${num})`);
 ////////////////////////////////////////////////////////////////////
     tour_img.style.backgroundImage = `url(${obj[num].card_img})`;
     tour_name.textContent = obj[num].card_name;
@@ -202,6 +247,9 @@ function create_adap_tour_filter(obj, num){
             filter_b_cont.appendChild(filter_b_name);
         }
     }
+    ////////////////////////////////////////////////////////////////////
+    // filter_name.onclick = function(){open_adap_filter(num)};
+    ////////////////////////////////////////////////////////////////////
     let hr = document.createElement('hr');
     filter_cont.appendChild(hr);
 }
@@ -213,4 +261,43 @@ function open_block(id){
     }else{
         filters.classList.remove('hide')
     }
+}
+
+function Save(obj, num){
+    localStorage.setItem('card_img', obj[num].card_img);
+    localStorage.setItem('card_name', obj[num].card_name);
+    localStorage.setItem('card_price', obj[num].card_price);
+    localStorage.setItem('card_description', obj[num].card_description);
+    localStorage.setItem('card_category_solution', obj[num].card_category.solution);
+    localStorage.setItem('card_category_time', obj[num].card_category.time);
+    localStorage.setItem('card_category_level-action', obj[num].card_category.level_action);
+    localStorage.setItem('card_category_city', obj[num].card_category.city);
+    localStorage.setItem('card_check_price_one', obj[num].card_check_price_one);
+    localStorage.setItem('card_price_one', obj[num].card_price_one);
+}
+
+function Delete_save(){
+    localStorage.removeItem('card_img');
+    localStorage.removeItem('card_name');
+    localStorage.removeItem('card_price');
+    localStorage.removeItem('card_description');
+    localStorage.removeItem('card_category_solution');
+    localStorage.removeItem('card_category_time');
+    localStorage.removeItem('card_category_level-action');
+    localStorage.removeItem('card_category_city');
+    localStorage.removeItem('card_check_price_one');
+    localStorage.removeItem('card_price_one');
+}
+
+function checkBasket(){
+    if(!localStorage.getItem('basket_counter') > 0){
+        return localStorage.setItem('basket_counter', 0);
+    }else{
+        return;
+    }
+}
+
+function Book(obj, num){
+    c_bas++;
+    localStorage.setItem('basket_counter', c_bas) 
 }

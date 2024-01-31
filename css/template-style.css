@@ -13,6 +13,7 @@
 @import url(../cssblocks/tour.css);
 @import url(../cssblocks/form.css);
 @import url(../cssblocks/popup-card.css);
+@import url(../cssblocks/page-tour.css);
 @import url(../cssblocks/footer.css);
 
 /* css adaptive */
@@ -21,8 +22,10 @@
 @import url(../cssadaptive/adapMargPadd.css);
 @import url(../cssadaptive/adapheader.css);
 @import url(../cssadaptive/adapbanner.css);
+@import url(../cssadaptive/adap_basket.css);
 @import url(../cssadaptive/adap_contact.css);
 @import url(../cssadaptive/adap_tour.css);
 @import url(../cssadaptive/adapform.css);
 @import url(../cssadaptive/adap_popup-card.css);
+@import url(../cssadaptive/adap_page-tour.css);
 @import url(../cssadaptive/adapfooter.css);

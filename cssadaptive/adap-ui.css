@@ -34,6 +34,7 @@
     .card-style{
         height: 214px;
         width: 204px;
+        /* border-radius: 40px; */
     }
     .card-head{
         height: 65px;

@@ -6,7 +6,12 @@
 }
 
 .tour_content-cont{
+    /* height: 100px; */
+    /* background: whitesmoke; */
     margin-top: 40px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 2fr; */
+
 }
 
 .tour_list-cont{
@@ -95,6 +100,8 @@
 /************************************************tour card**/
 .tour_cards{
     display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-column-gap: 15px; */
 }
 
 .tour_card-cont{
@@ -104,6 +111,7 @@
 
 .tour_card_img{
     height: 276px;
+    /* width: 276px; */
     background: url(../img/Astrahan.jpg);
     background-position: center;
     background-size: cover;
@@ -114,6 +122,11 @@
     display: grid;
     grid-row-gap:5px;
 }
+
+/* .tour_card_buttons {
+    display: flex;
+    justify-content: space-between;
+} */
 
 .tour_card_buttons button{
     border: none;
@@ -146,6 +159,10 @@
     display: grid;
     grid-row-gap: 20px;
 }
+/* .tour-adap_buttons-blocks{
+    display: flex;
+    justify-content: space-between;
+} */
 
 .t-a_b_block-1{
     height: 25px;
@@ -163,10 +180,10 @@
 
 
 .tour-adap_filter-block hr{
-    border: none;
-    color: var(--blue_color);
-    background-color: var(--blue_color);
-    height: 2px;
+    border: none; /* Убираем границу для браузера Firefox */
+    color: var(--blue_color); /* Цвет линии для остальных браузеров */
+    background-color: var(--blue_color); /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
 }
 
 .tour-adap_filter-block p, .tour-adap_filter-block span{
@@ -210,6 +227,10 @@
     justify-items: center;
     border-left: 1px solid var(--black_color);
 }
+
+
+
+
 /************************************************adap filter*/
 
 

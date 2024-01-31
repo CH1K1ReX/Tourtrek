@@ -1,0 +1,82 @@
+.tour-info_margin{
+    padding: calc(180px + 88px) 0 180px;
+}
+/* .t-page-container{ */
+    /* display: grid;
+    align-items: center; */
+/* } */
+
+.t-page-cont{
+    background: var(--white_color);
+    width: 100%;
+    display: grid;
+    align-items: center;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-column-gap: 20px;
+    /* padding: 20px; */
+    border-radius: 20px;
+}
+
+#t-page_img{
+    /* background: url(../img/forest.jpg); */
+    height: 100%;
+    /* width: 500px; */
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.t-page_information-cont{
+    height: 100%;
+}
+
+/* .t-page_buttons{
+
+} */
+
+.t-p_b_counter{
+    display: grid;
+    /* grid-template-columns: 20px 20px 20px; */
+    border: 1px solid black;
+}
+
+.t-p_b_counter p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.t-p_b_counter button{
+    background: none;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+}
+
+/* .t-page_buttons{
+    display: grid;
+} */
+
+.t-p_b_button{
+    border: none;
+    background: var(--blue_color);
+    color: var(--white_color);
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 30px;
+}
+
+.t-page_text-cont{
+    display: grid;
+    grid-row-gap: 20px;
+    padding: 0 20px 0 0;
+}
+
+.t-page_category{
+    display: grid;
+    grid-row-gap: 5px;
+    
+}
+
+.t-page_category p{
+    color: var(--blue_color);
+}

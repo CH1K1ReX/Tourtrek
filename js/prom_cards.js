@@ -1,4 +1,5 @@
-
+// вариант через импорт:
+// import cards from '../json/test.json' assert {type: 'json'};
 window.onload=function(){
     let requestURL = '../json/cards-promotion.json';
     import_json_for_cards(requestURL)
@@ -52,7 +53,13 @@ window.onload=function(){
         }
         for(let i = 0; i<cards.length; i++){
             let card = document.getElementById(`card-${i}`);
+            // Метод Element.closest() возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному CSS-селектору или null, если таковых элементов вообще нет:
+            // var elt = element.closest(selectors);
+            // selectors - строка, а точнее DOMString, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
+            // Результат - элемент DOM (Element), либо null.
             let target = event.target.closest(`#card-${i}`);
+            // Инструкция continue прерывает выполнение текущей итерации текущего или отмеченного цикла, и продолжает его выполнение на следующей итерации.
+            // Оператор return завершает выполнение текущей функции и возвращает её значение.
             if(!target){continue};
             if(!cont_cards.contains(target)){continue};
             if(card != target){

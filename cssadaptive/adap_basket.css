@@ -1,0 +1,152 @@
+@media screen and (min-width:1500px){
+    .ins_c_block{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 20px;
+    }
+    .b-p_header-2{
+        font-size: 24px;
+    }
+    .ins_c_b_container{
+        height: 600px;
+        grid-template-rows: 100px 80px 100px 1fr 30px;
+    }
+    .b-p_header-3{
+        font-size: 16px;
+    }
+    /******************************Form ***/
+    .basket_cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .basket_c_form form{
+        justify-content: end;
+    }
+    .basket_inp-style{
+        width: 500px;
+    }
+    .basket_btn-style{
+        height: 80px;
+    }
+    /******************************Form ***/
+}
+
+/*******************************************************************************************1500*/
+@media screen and (max-width:1499px){
+    /******************************insurance */
+    .ins_c_block{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 20px;
+    }
+    .b-p_header-2{
+        font-size: 24px;
+    }
+    .ins_c_b_container{
+        height: 650px;
+        grid-template-rows: 100px 80px 100px 1fr 40px;
+    }
+    .b-p_header-3{
+        font-size: 16px;
+    }
+    /******************************insurance */
+    /******************************Form ***/
+    .basket_cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .basket_c_form form{
+        justify-content: end;
+    }
+    .basket_inp-style{
+        width: 500px;
+    }
+    .basket_btn-style{
+        height: 80px;
+    /******************************Form ***/
+    /******************************Button */ 
+    /******************************Button */
+    }
+}
+    /*******************************************************************************************1200*/
+    @media screen and (max-width:1200px){
+        .b-p_header-2{
+            font-size: 22px;
+        }
+        .b-p_header-3{
+            font-size: 14px;
+        }
+        .ins_c_b_container{
+            height: 700px;
+        }
+    }
+
+    /*******************************************************************************************1080*/
+    @media screen and (max-width:1120px){
+        .ins_c_block{
+            grid-template-columns: none;
+            grid-row-gap: 20px;
+        }
+        .ins_c_b_container{
+            height: 450px;
+            grid-template-rows: 80px 40px 60px 1fr 40px;
+
+        }
+        /******************************Form ***/
+        .basket_cont{
+            display: grid;
+            grid-template-columns: none;
+        }
+        .basket_c_form{
+            margin-top: 100px;
+        }
+        .basket_c_form form{
+            justify-content: normal;
+        }
+        .basket_inp-style{
+            width: auto;
+        }
+        .b-p_header-2{
+            font-size: 24px;
+        }
+        .b-p_header-3{
+            font-size: 16px;
+        }
+        /******************************Form ***/
+        
+    }
+    
+    /*******************************************************************************************1024*/
+    @media screen and (max-width:1024px){
+
+    }
+    
+    /********************************************************************************************768*/
+    @media screen and (max-width:768px){
+        .b-p_header-2{
+            font-size: 22px;
+        }
+        .b-p_header-3{
+            font-size: 14px;
+        }
+        .basket_btn-style{
+            height: 70px;
+        }
+    }
+    
+    /********************************************************************************************480*/
+    @media screen and (max-width:480px){
+        .b-p_header-2{
+            font-size: 20px;
+        }
+        .b-p_header-3{
+            font-size: 12px;
+        }
+    }
+    
+    /********************************************************************************************320*/
+    @media screen and (max-width:320px){
+        .basket_btn-style{
+            height: 60px;
+        }
+    }

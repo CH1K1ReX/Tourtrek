@@ -1,4 +1,41 @@
-
+/*  
+1500: 
+    h1-1
+    h2-1
+    h3-1
+    h4-1
+    h5-1
+1200:
+    h1-2
+    h2-1
+    h3-1
+    h4-1
+    h5-1
+1024:
+    h1-3
+    h2-2
+    h3-1
+    h4-1
+    h5-1
+768:
+    h1-1
+    h2-1
+    h3-1
+    h4-1
+    h5-1
+480:
+    h1-2
+    h2-2
+    h3-2
+    h4-2
+    h5-1    
+320:
+    h1-3
+    h2-3
+    h3-3
+    h4-3
+    h5-2   
+*/
 
 /*******************************************************************************************1500<*/
 @media screen and (min-width:1500px), screen and (max-width:1499px){
@@ -43,6 +80,22 @@
         font-size: var(--header-adap-h1_2);
         line-height: var(--header-adap-h1_2); 
     }
+    /* h2, .p-header_2{
+        font-size: var(--header-adap-h2_2);
+        line-height: var(--header-adap-h2_2);
+    } */
+    /* .p-header_3{
+        font-size: var(--header-adap-h3_2);
+        line-height: var(--header-adap-h3_2);
+    } */
+    /* .p-header_4{
+        font-size: var(--header-adap-h4_2);
+        line-height: var(--header-adap-h4_2);
+    } */
+    /* .p-header_5{
+        font-size: var(--header-adap-h5_2);
+        line-height: var(--header-adap-h5_2);
+    } */
 }
     
 /*******************************************************************************************1024*/
@@ -55,7 +108,31 @@
         font-size: var(--header-adap-h2_2);
         line-height: var(--header-adap-h2_2);
     }
+    /* .p-header_3{
+        font-size: var(--header-adap-h3_3);
+        line-height: var(--header-adap-h3_3);
+    } */
+    /* .p-header_4{
+        font-size: var(--header-adap-h4_3);
+        line-height: var(--header-adap-h4_3);
+    } */
+    /* .p-header_5{
+        font-size: var(--header-adap-h5_3);
+        line-height: var(--header-adap-h5_3);
+    } */
 /****************************************************************adap tour card p-header */
+    /* .t_p-header_1{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .t_p-header_2{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .t_p-header_3{
+        font-size: 11px;
+        line-height: 11px;
+    } */
 }
     
 /********************************************************************************************768*/
@@ -137,6 +214,10 @@
         font-size: var(--header-adap-h4_3);
         line-height: var(--header-adap-h3_3);
     }
+    /* .p-header_5{
+        font-size: var(--header-adap-h5_3);
+        line-height: var(--header-adap-h5_3);
+    } */
 /****************************************************************adap tour card p-header */
     .t_p-header_1{
         font-size: 18px;

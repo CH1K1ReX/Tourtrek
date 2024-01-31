@@ -1,12 +1,12 @@
 [
     {
-        "id":"1",
+        "id":1,
         "card_img": "../img/red.jpg",
         "card_name": "Тур по красной площади",
         "card_price": "13 000",
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "Площадь Площадь Площадь Площадь Площадь Площадь Площадь Площадь Площадь Площадь",
         "card_category":{
             "solution": "Обзорная",
             "time": "1-3 дня",
@@ -15,7 +15,7 @@
         }
     },
     {
-        "id":"2",
+        "id":2,
         "card_img": "../img/mountains.jpg",
         "card_name": "Тур на Кавказские горы",
         "card_price": "25 999",
@@ -30,7 +30,7 @@
         }
     },
     {
-        "id":"3",
+        "id":3,
         "card_img": "../img/forest.jpg",
         "card_name": "Походный тур 'В лес'",
         "card_price": "20 000",
@@ -45,7 +45,7 @@
         }
     },
     {
-        "id":"4",
+        "id":4,
         "card_img": "../img/camp.jpg",
         "card_name": "Отдых 'По старски'",
         "card_price": "7 999",
@@ -60,7 +60,7 @@
         }
     },
     {
-        "id":"5",
+        "id":5,
         "card_img": "../img/termal.jpg",
         "card_name": "Отдых в термальном источнике",
         "card_price": "31 999",
@@ -75,7 +75,7 @@
         }
     },
     {
-        "id":"6",
+        "id":6,
         "card_img": "../img/horse.jpg",
         "card_name": "Походный тур с конями",
         "card_price": "19 999",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "id":"7",
+        "id":7,
         "card_img": "../img/deer.jpg",
         "card_name": "Тур Олень",
         "card_price": "9 999",
@@ -105,7 +105,7 @@
         }
     },
     {
-        "id":"8",
+        "id":8,
         "card_img": "../img/kavkaz.jpg",
         "card_name": "Тур около Кавказа",
         "card_price": "10 000",
@@ -120,7 +120,7 @@
         }
     },
     {
-        "id":"9",
+        "id":9,
         "card_img": "../img/Sankt-Peterburg.jpg",
         "card_name": "Тур по Санкт-Петербургу",
         "card_price": "12 999",
@@ -135,7 +135,7 @@
         }
     },
     {
-        "id":"10",
+        "id":10,
         "card_img": "../img/ozero.jpg",
         "card_name": "Алтайские горы 'Пробежка'",
         "card_price": "9 999",
@@ -150,7 +150,7 @@
         }
     },
     {
-        "id":"11",
+        "id":11,
         "card_img": "../img/big-mountains.jpg",
         "card_name": "Уральские горы 'Поход'",
         "card_price": "3 999",

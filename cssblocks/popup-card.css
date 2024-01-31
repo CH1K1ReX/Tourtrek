@@ -3,9 +3,10 @@
     top: 0;
 }
 .popup-container_background{
-    background: rgb(255, 255, 255, 0.60);
+    background: rgba(167, 186, 255, 0.6);
     backdrop-filter: blur(4px);
     width: 100vw;
+    height: 100vh;
 }
 
 .popup-cont{
@@ -25,6 +26,7 @@
 }
 
 .popup_text-cont{
+    /* background: red; */
     display: grid;
     grid-row-gap: 15px;
     padding-top: 20px;
