@@ -1,6 +1,9 @@
 let c_bas = 0;
+let id_counter=0;
 
-window.onload = function(){
+// let counter = document.getElementById('counter')
+// console.log(counter);
+window.onload = () =>{
     Delete_save();
     checkBasket();
     let requestURL = '../json/cards-tour.json';
@@ -51,10 +54,11 @@ window.onload = function(){
             if(event.target === tour_img_id || event.target === tour_name_id || event.target === tour_details_id){
                 import_json_for_card_tours(requestURL, i-1)
                 window.location.href = "../html/tour-page.html";
-                console.log(i);
+                // console.log(i);
+                return;
             }
             else if(event.target === tour_book_id){
-                import_json_for_book(requestURL, i-1, c_bas)
+                import_json_for_book(requestURL, i-1)
             }else{continue};
         }
     }  
@@ -62,20 +66,14 @@ window.onload = function(){
         const request = new Request(requestURL);
         const response = await fetch(request);
         const cards = await response.json(); 
-        // if(event !== document.getElementById(`tour_book_id_${num_i}`)){
         Save(cards, num);
-            // console.log(false);
-        // }else if(event === document){
-            // console.log(true);
-        // }
-        
     } 
-    async function import_json_for_book(requestURL, num, basket){
+    async function import_json_for_book(requestURL, num){
         const request = new Request(requestURL);
         const response = await fetch(request);
         const cards = await response.json(); 
-        Book(cards, num, basket);
-    }
+        Basket(cards, num);
+    }   
 }
 
 function create_tour_card(obj, num){
@@ -111,8 +109,6 @@ function create_tour_card(obj, num){
     tour_name.setAttribute('id', `tour_name_id_${obj[num].id}`);
     tour_b_b_btn_book.setAttribute('id', `tour_book_id_${obj[num].id}`);
     tour_b_b_btn_details.setAttribute('id', `tour_details_id_${obj[num].id}`);
-
-    // tour_b_b_btn_details.setAttribute('onclick', `info_button(${num})`);
 ////////////////////////////////////////////////////////////////////
     tour_img.style.backgroundImage = `url(${obj[num].card_img})`;
     tour_name.textContent = obj[num].card_name;
@@ -263,6 +259,9 @@ function open_block(id){
     }
 }
 
+/////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////Local Storage ////////
+
 function Save(obj, num){
     localStorage.setItem('card_img', obj[num].card_img);
     localStorage.setItem('card_name', obj[num].card_name);
@@ -274,6 +273,8 @@ function Save(obj, num){
     localStorage.setItem('card_category_city', obj[num].card_category.city);
     localStorage.setItem('card_check_price_one', obj[num].card_check_price_one);
     localStorage.setItem('card_price_one', obj[num].card_price_one);
+    localStorage.setItem('tour_id', obj[num].id)
+    localStorage.setItem('tour_price_value', obj[num].card_price_value)
 }
 
 function Delete_save(){
@@ -287,6 +288,9 @@ function Delete_save(){
     localStorage.removeItem('card_category_city');
     localStorage.removeItem('card_check_price_one');
     localStorage.removeItem('card_price_one');
+    localStorage.removeItem('tour_id');
+    localStorage.removeItem('tour_price_value');
+    localStorage.removeItem('counter');
 }
 
 function checkBasket(){
@@ -297,7 +301,41 @@ function checkBasket(){
     }
 }
 
+function Basket(obj, num){
+    if(localStorage.getItem('basket_counter') === 0){
+        // c_bas++;
+        localStorage.setItem('basket_counter', 1) 
+        Book(obj, num)
+    }else{
+        c_bas = localStorage.getItem('basket_counter');
+        c_bas++;
+        localStorage.setItem('basket_counter', c_bas) 
+        Book(obj, num)
+    }
+}
+
 function Book(obj, num){
-    c_bas++;
-    localStorage.setItem('basket_counter', c_bas) 
+    if(!localStorage.getItem(`tour_id_${obj[num].id}`)){
+        // id_counter++;
+        localStorage.setItem(`tour_id_${obj[num].id}`, 1)
+        if(!localStorage.getItem(`tour_price_id_${obj[num].id}`)){
+            localStorage.setItem(`tour_price_id_${obj[num].id}`, obj[num].card_price_value)
+
+        }
+    }else{
+        // for(let i = 1; i<localStorage.getItem('basket_counter');i++){
+            // if(!localStorage.getItem(`tour_id_${obj[num].id}`+'_'+i)){
+            //     localStorage.setItem(`tour_id_${obj[num].id}`+'_'+i, obj[num].id);
+            //     console.log(true);
+            //     return;
+            // }
+        // }
+        let tour_counter = localStorage.getItem(`tour_id_${obj[num].id}`);
+        tour_counter++;
+        localStorage.setItem(`tour_id_${obj[num].id}`, tour_counter);
+        if(!localStorage.getItem(`tour_price_id_${obj[num].id}`)){
+            localStorage.setItem(`tour_price_id_${obj[num].id}`, obj[num].card_price_value)
+
+        }
+    }
 }

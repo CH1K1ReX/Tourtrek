@@ -3,7 +3,6 @@ async function include(selector, address){
         .then(data => { document.getElementById(selector).innerHTML=data})
 }
 
-
 include('header', '../html/header.html');
 if(document.getElementById('faq')){
     include('faq', '../html/faq-block.html');

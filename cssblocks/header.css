@@ -6,7 +6,7 @@ header{
 
 .header-container{
     background: rgb(255, 255, 255, 0.60);
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px); */
     height: 100%;
     border-radius: 0 0 40px 40px;
     display: flex;
@@ -81,22 +81,39 @@ header{
 }
 
 .basket-count{
+    height: 15px;
+    width: 15px;
+    background:red;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 14px;
-    width: 14px;
-    border-radius: 120px;
-    background: red;
+    border-radius: 100px;
     position: relative;
     left: 7px;
     top: 9px;
+    
+}
+
+.basket-count span{
+    /* position: relative; */
+    /* right: 0.1px; */
+    /* top: 0.3px; */
 }
 
 .basket-cont a img{
     margin-bottom: 2px;
 }
-
+/* 
+.b-count_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 14px;
+    width: 14px;
+    border-radius: 120px;
+    background: red;
+} */
 /**********navbar-tour***************/
 
 .navbar-tour-cont hr{

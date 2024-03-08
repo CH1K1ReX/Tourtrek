@@ -33,13 +33,13 @@
     margin: 100px 0 40px;
 }
 
-.basket_cont{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .basket_c_block>:first-child{
     margin-bottom: 15px;
+}
+
+.b_c_b_sum{
+    margin-top: 15px;
+    text-align: end;
 }
 
 .basket_c_form form{
@@ -66,4 +66,49 @@
     border-radius: 100px;
     font-size: var(--header_3);
     font-family: 'Rubik Regular';
+}
+
+.b_i_tour{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.b_i_t_block-tour, .b_i_t_block-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.b_i_t_b_img{
+    height: 80px;
+    max-width: 80px;
+    border-radius: 10px;
+}
+
+/* .b_i_t_b_name-counter, .b_i_t_b_counter{
+    gap: 10px;
+} */
+
+.b__counter-cont{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.b_i_t_b_remove, .plus, .minus{
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--black_color);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.b_i_t_b_remove img, .b__counter-cont img{
+    height: 8px;
+    width: 8px;
 }
