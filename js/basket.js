@@ -199,8 +199,9 @@ function CounterMinus(i, obj, basket){
     let n_counter = document.getElementById(`id_n_counter_${i}`)
     let value = Number(localStorage.getItem(`tour_id_${i}`));
     if(localStorage.getItem(`tour_id_${i}`)-1 === 0){
-        BasketMinus(1);
+        // BasketMinus(1);
         RemoveTour(i, obj, basket);
+        return
     }else{
         c_counter.textContent = value - 1;
         n_counter.textContent = value - 1;
