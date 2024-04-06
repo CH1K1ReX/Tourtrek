@@ -38,18 +38,40 @@
                             <div class="tour-adap_filter-block hide" id="adap_filter_result">
                                 <div class="t-a_f_cont">
                                     <hr>
-                                    <p class="t-a_f_c_name" id="adap_filter_name" onclick="open_block('filter_order')">Сортировка</p>
+                                    <p class="t-a_f_c_name blue-color" id="adap_filter_name" onclick="open_block('filter_order')">Сортировка</p>
                                     <div class="hide" id="filter_order">
-                                        <div class="t-a_f_c_order">
-                                            <span>Порядок: сперва старые</span>
-                                            <span>Порядок: сперва новые</span>
-                                            <span>Цена: по возрастанию</span>
-                                            <span>Цена: по убыванию</span>
-                                            <span>Название: А-Я</span>
-                                            <span>Название: Я-А</span>
+                                        <ul class="t-a_f_c_order-ul">
+                                            <li class="filter-adap_one_order filter-adap_off" id="t-filter-adap_order_1" onclick="StatusFilter('order', 1, 'one')">Порядок: сперва старые</li>
+                                            <li class="filter-adap_one_order filter-adap_off" id="t-filter-adap_order_2" onclick="StatusFilter('order', 2, 'one')">Порядок: сперва новые</li>
+                                            <li class="filter-adap_one_order filter-adap_off" id="t-filter-adap_order_3" onclick="StatusFilter('order', 3, 'one')">Цена: по возрастанию</li>
+                                            <li class="filter-adap_one_order filter-adap_off" id="t-filter-adap_order_4" onclick="StatusFilter('order', 4, 'one')">Цена: по убыванию</li>
+                                            <li class="filter-adap_one_order filter-adap_off" id="t-filter-adap_order_5" onclick="StatusFilter('order', 5, 'one')">Название: А-Я</li>
+                                            <li class="filter-adap_one_order filter-adap_off" id="t-filter-adap_order_6" onclick="StatusFilter('order', 6, 'one')">Название: Я-А</li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="t-a_f_cont"> 
+                                    <p class="t-a_f_c_name" id="adap_filter_name" onclick="open_block('filter_slider')">Цена</p>
+                                    <div class="tour-adap_slider-cont hide" id="filter_slider">
+                                        <div class="t_s-c_container">
+                                            <div class="t_s__value">
+                                                <span id="adap-title_min" class="t_s__value_title">12500</span>
+                                                <span id="adap-title_max" class="t_s__value_title">37500</span>
+                                            </div>
+                                            <div class="t_s__double-slider">
+                                                <div class="t_s__double-slider__body">
+                                                    <div class="t_s__double-slider__track">
+                                                        <div id="adap-slider_range" class="t_s__double-slider__range"></div>
+                                                        <div id="adap-dot_left" class="t_s__double-slider__dot t_s__double-slider__dot--left"></div>
+                                                        <div id="adap-dot_right" class="t_s__double-slider__dot t_s__double-slider__dot--right"></div>
+                                                    </div>
+                                                    <input id="adap-input_left" type="range" min="0" max="50000" value="12500" class="t_s__double-slider__input">
+                                                    <input id="adap-input_right" type="range" min="0" max="50000" value="37500" class="t_s__double-slider__input">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    
                                     <hr>
                                 </div>
                                 <!-- <div class="t-a_f_cont">
@@ -122,20 +144,48 @@
                             </div>
                         </div>
 <!----------------------------------------------------------adap block -->
-
                         <div class="tour_list-cont">
                             <div class="tour_list_search">
                                 <input type="text" name="search" placeholder="Поиск...">
                                 <div><img src="../svg/search-ui.svg" alt="search"></div>
                             </div>
-                            <div class="tour_list_order">
-                                <p>Порядок: по умолчанию</p>
-                                <div><img src="../svg/tringle.svg" alt="tringle"></div>
+                            <div>
+                                <div class="tour_list_order" id="order_list" onclick="OrderList()">
+                                    <p>Порядок: по умолчанию</p>
+                                    <div><img src="../svg/tringle.svg" alt="tringle" id="order_tringle"></div>
+                                </div>
+                                <ul class="t_l_order_ul hide" id="ul_list_order">
+                                    <li class="filter_one_order filter_off" id="t-filter_order_1" onclick="StatusFilter('order', 1, 'one')">Порядок: сперва старые</li>
+                                    <li class="filter_one_order filter_off" id="t-filter_order_2" onclick="StatusFilter('order', 2, 'one')">Порядок: сперва новые</li>
+                                    <li class="filter_one_order filter_off" id="t-filter_order_3" onclick="StatusFilter('order', 3, 'one')">Цена: по возрастанию</li>
+                                    <li class="filter_one_order filter_off" id="t-filter_order_4" onclick="StatusFilter('order', 4, 'one')">Цена: по убыванию</li>
+                                    <li class="filter_one_order filter_off" id="t-filter_order_5" onclick="StatusFilter('order', 5, 'one')">Название: А-Я</li>
+                                    <li class="filter_one_order filter_off" id="t-filter_order_6" onclick="StatusFilter('order', 6, 'one')">Название: Я-А</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="tour_content-cont">
                             <div class="tour_filters" id="filter_result">
-                                <div></div>
+                                <div class="tour_slider-cont">
+                                    <p class="header-3 blue-color medium">Цена</p>
+                                    <div class="t_s-c_container">
+                                        <div class="t_s__value">
+                                            <span id="title_min" class="t_s__value_title">12500</span>
+                                            <span id="title_max" class="t_s__value_title">37500</span>
+                                        </div>
+                                        <div class="t_s__double-slider">
+                                            <div class="t_s__double-slider__body">
+                                                <div class="t_s__double-slider__track">
+                                                    <div id="slider_range" class="t_s__double-slider__range"></div>
+                                                    <div id="dot_left" class="t_s__double-slider__dot t_s__double-slider__dot--left"></div>
+                                                    <div id="dot_right" class="t_s__double-slider__dot t_s__double-slider__dot--right"></div>
+                                                </div>
+                                                <input id="input_left" type="range" min="0" max="50000" value="12500" class="t_s__double-slider__input">
+                                                <input id="input_right" type="range" min="0" max="50000" value="37500" class="t_s__double-slider__input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- <div class="tour_filter-cont">
                                     <p class="header-3 blue-color">Подборка</p>
                                     <div class="t_f_checkboxs-cont">

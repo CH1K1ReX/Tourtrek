@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "cat_name": "Активные туры",
+        "cat_init": "АТ",
+        "cat_img": null
+    },
+    {
+        "id": 2,
+        "cat_name": "Гастрономические Туры",
+        "cat_init": "ГТ",
+        "cat_img": null
+    },
+    {
+        "id": 3,
+        "cat_name": "Необычные туры",
+        "cat_init": "НТ",
+        "cat_img": null
+    },
+    {
+        "id": 4,
+        "cat_name": "Обзорные туры",
+        "cat_init": "ОТ",
+        "cat_img": null
+    },
+    {
+        "id": 5,
+        "cat_name": "Отдых с детьми",
+        "cat_init": "ОД",
+        "cat_img": null
+    },
+    {
+        "id": 6,
+        "cat_name": "Тур с животными",
+        "cat_init": "ТЖ",
+        "cat_img": null
+    },
+    {
+        "id": 7,
+        "cat_name": "Туры для детей",
+        "cat_init": "ТД",
+        "cat_img": null
+    },
+    {
+        "id": 8,
+        "cat_name": "Туры для пенсионеров",
+        "cat_init": "ТП",
+        "cat_img": null
+    },
+    {
+        "id": 9,
+        "cat_name":  "Туры на термальные источники",
+        "cat_init": "ТИ",
+        "cat_img": null
+    },
+    {
+        "id": 10,
+        "cat_name": "Туры выходного дня",
+        "cat_init": "ВД",
+        "cat_img": null
+    },
+    {
+        "id": 11,
+        "cat_name": "Экскурсионные туры",
+        "cat_init": "ЭТ",
+        "cat_img": null
+    },
+    {
+        "id": 12,
+        "cat_name": "Этнотуры",
+        "cat_init": "ЭН",
+        "cat_img": null
+    },
+    {
+        "id": 13,
+        "cat_name": "Недорогие туры",
+        "cat_init": "НТ",
+        "cat_img": null
+    },
+    {
+        "id": 14,
+        "cat_name": "Спокойные туры",
+        "cat_init": "СТ",
+        "cat_img": null
+    },
+    {
+        "id": 15,
+        "cat_name": "Умеренные туры",
+        "cat_init": "УТ",
+        "cat_img": null
+    },
+    {
+        "id": 16,
+        "cat_name": "Экстримальные туры",
+        "cat_init": "СТ",
+        "cat_img": null
+    }
+]

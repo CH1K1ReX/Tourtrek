@@ -1,0 +1,258 @@
+/*******************************************************************************************1500<*/
+@media screen and (min-width:1500px){
+    /******************************block-1*/
+    .block-cont__1{
+        width: 50%;
+    }
+    /******************************ball*/
+    .i-n_c_block{
+        grid-template-columns: 100px 20px 1fr;
+    }
+    .ball-about{
+        height: 100px;
+    }
+    .ball-about_plane{
+        height: 100px;
+        width: 100px;
+        bottom: 0;
+    }
+    /******************************block-2*/
+    .m-c_block-2_cont{
+        display:flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .b-c__2_i-a__cont{
+        /* background: var(--white_color); */
+        width: 350px;
+        /* height: 450px; */
+        /* padding: 30px; */
+        /* border-radius: 20px; */
+        /* display: grid; */
+    }
+    .i-plane_c_block{
+        bottom: 50px;
+        left: 10px;
+    }
+    /******************************block-3*/
+    .m-c_block-3_inf-1_cont, .m-c_block-3_inf-2_cont{
+        width: 50%;
+    }
+    .m-c_block-3_inf-1_cont{
+        border-radius: 0 0 40px 0;
+    }
+    .m-c_block-3_inf-2_cont{
+        border-radius: 40px 0 0 40px;
+    }
+    .a-plane{
+        height: 1600px;
+    }
+    /******************************MargPad*/
+    .about-ing_pad-marg_right{
+        margin-right: 180px;
+        padding-right: 60px;
+    }
+    .about-ing_pad-marg_left{
+        margin-left: 180px;
+        padding-left: 60px;
+    }
+}
+
+/*******************************************************************************************1499*/
+@media screen and (max-width:1499px){
+    /******************************block-1*/
+    .block-cont__1{
+        width: 50%;
+    }
+    /******************************ball*/
+    .i-n_c_block{
+        grid-template-columns: 100px 20px 1fr;
+    }
+    .ball-about{
+        height: 100px;
+    }
+    .ball-about_plane{
+        height: 100px;
+        width: 100px;
+        bottom: 0;
+    }
+    /******************************block-2*/
+    .m-c_block-2_cont{
+        display:flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .b-c__2_i-a__cont{
+        width: 350px;
+    }
+    .a-plane{
+        height: 1600px;
+    }
+    .i-plane_c_block{
+        bottom: 50px;
+        left: 10px;
+    }
+    /******************************block-3*/
+    .m-c_block-3_inf-1_cont, .m-c_block-3_inf-2_cont{
+        width: 50%;
+        border-radius: 0;
+    }
+    .m-c_block-3_inf-1_cont{
+        border-radius: 0 0 40px 0;
+    }
+    .m-c_block-3_inf-2_cont{
+        border-radius: 40px 0 0 40px;
+    }
+    /******************************MargPad*/
+    .about-ing_pad-marg_right{
+        margin-right: 80px;
+        padding-right: 50px;
+    }
+    .about-ing_pad-marg_left{
+        margin-left: 80px;
+        padding-left: 50px;
+    }
+}
+    
+/*******************************************************************************************1200*/
+@media screen and (max-width:1200px){
+   /******************************MargPad*/
+    .about-ing_pad-marg_right{
+        margin-right: 60px;
+        padding-right: 40px;
+    }
+    .about-ing_pad-marg_left{
+        margin-left: 60px;
+        padding-left: 40px;
+    }
+}
+    
+/*******************************************************************************************1024*/
+@media screen and (max-width:1024px){
+    /******************************MargPad*/
+    .about-ing_pad-marg_right{
+        margin-right: 40px;
+        padding-right: 40px;
+    }
+    .about-ing_pad-marg_left{
+        margin-left: 40px;
+        padding-left: 40px;
+    }
+}
+    
+/********************************************************************************************768*/
+@media screen and (max-width:768px){
+    /******************************block-1*/
+    .block-cont__1{
+        width: auto;
+    }
+    /******************************block-2*/
+    .a-plane{
+        height: 1200px;
+    }
+    /******************************ball*/
+    .i-n_c_block{
+        grid-template-columns: 75px 20px 1fr;
+    }
+    .ball-about{
+        height: 75px;
+    }
+    .ball-about_plane{
+        height: 75px;
+        width: 75px;
+        bottom: 40px;
+    }
+    /******************************block-2*/
+    .m-c_block-2_cont{
+        display:grid;
+    }
+    .b-c__2_i-a__cont{
+        width: auto;
+    }
+    .i-plane_c_block{
+        bottom: 90px;
+    }
+    /******************************block-3*/
+    .m-c_block-3_inf-1_cont, .m-c_block-3_inf-2_cont{
+        width: auto;
+        border-radius: 0;
+        padding: 40px 0;
+    }
+    /******************************MargPad*/
+    .about-ing_pad-marg_right, .block-cont__2_inf-about, .block-cont__3_i-1_cont, .block-cont__3_i-3_cont{
+        margin-right: 25px;
+        padding-right: 40px;
+    }
+    .about-ing_pad-marg_left, .block-cont__2_inf-list, .block-cont__3_i-2_cont, .block-cont__3_i-3_cont{
+        margin-left: 25px;
+        padding-left: 40px;
+    }
+}
+    
+/********************************************************************************************480*/
+@media screen and (max-width:480px){
+    /******************************ball*/
+    .i-n_c_block{
+        grid-template-columns: 60px 20px 1fr;
+    }
+    .ball-about{
+        height: 60px;
+    }
+    .ball-about_plane{
+        height: 60px;
+        width: 60px;
+        bottom: 80px;
+
+    }
+    /******************************block-2*/
+    .a-plane{
+        height: 800px;
+    }
+    .i-plane_c_block{
+        bottom: 110px;
+        left: -20px;
+    }
+    /******************************MargPad*/
+    .about-ing_pad-marg_right, .block-cont__2_inf-about, .block-cont__3_i-1_cont, .block-cont__3_i-3_cont{
+        margin-right: 15px;
+        padding-right: 30px;
+    }
+    .about-ing_pad-marg_left, .block-cont__2_inf-list, .block-cont__3_i-2_cont, .block-cont__3_i-3_cont{
+        margin-left: 15px;
+        padding-left: 30px;
+    }
+}
+    
+/********************************************************************************************320*/
+@media screen and (max-width:320px){
+    /******************************ball*/
+    .i-n_c_block{
+        grid-template-columns: 50px 20px 1fr;
+    }
+    .ball-about{
+        height: 50px;
+    }
+    .ball-about_plane{
+        height: 50px;
+        width: 50px;
+        bottom: 100px;
+    }
+    /******************************block-2*/
+    .a-plane{
+        height:600px;
+    }
+    .i-plane_c_block{
+        bottom: 120px;
+        left: -30px;
+    }
+    /******************************MargPad*/
+    .about-ing_pad-marg_right, .block-cont__2_inf-about, .block-cont__3_i-1_cont, .block-cont__3_i-3_cont{
+        margin-right: 10px;
+        padding-right: 20px;
+    }
+    .about-ing_pad-marg_left, .block-cont__2_inf-list, .block-cont__3_i-2_cont, .block-cont__3_i-3_cont{
+        margin-left: 10px;
+        padding-left: 20px;
+    }
+}

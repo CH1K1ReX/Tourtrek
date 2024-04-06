@@ -1,52 +1,28 @@
-window.onload = function(){
-    let requestURL = '../json/cards-tour.json';
-    const basket = document.getElementById('basket_info')
-    import_json_for_cards(requestURL, basket);
-    async function import_json_for_cards(requestURL, basket){
-        const request = new Request(requestURL);
-        const response = await fetch(request);
-        const cards = await response.json(); 
-        // const basket = document.getElementById('basket_info')
-        // const arr = CreateArrOfToursLength(basket);
-        for(let i = 1; i<=cards.length; i++){
-            if(localStorage.getItem(`tour_id_${i}`)){
-                CreateTourCardInBasket(cards, i, basket) ;
-                // CloseTourCardInBasket(basket);
-                // console.log(i);
-                // CreateArrOfToursLength(i, tour_arr)   
-            }
-            if(i==cards.length && localStorage.getItem('basket_counter')!=0){
-                // CloseTourCardInBasket(basket);
-                SumSum(cards)
-                // return;
-            }
+let requestURL = '../json/cards-tour.json';
+const basket = document.getElementById('basket_info')
+import_json_for_cards(requestURL, basket);
+async function import_json_for_cards(requestURL, basket){
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const cards = await response.json(); 
+    for(let i = 1; i<=cards.length; i++){
+        if(localStorage.getItem(`tour_id_${i}`)){
+            CreateTourCardInBasket(cards, i,basket) ;  
         }
-        // SumSum()
-        if(Number(localStorage.getItem('basket_counter')) === 0 || !localStorage.getItem('basket_counter')){
-            BasketFields(basket);
-        }else{
-            CloseTourCardInBasket(basket);
+        if(i==cards.length && localStorage.getItem('basket_counter')!=0){
+            SumSum(cards)
         }
     }
+    if(Number(localStorage.getItem('basket_counter')) === 0 || !localStorage.getItem('basket_counter')){
+        BasketFields(basket);
+    }else{
+        CloseTourCardInBasket(basket);
+    }
 }
-// console.log(max_length);
 
 
-// window.onclick = function(event){
-//     let tours = document.querySelectorAll('.b_i_tour')
-//     // console.log(tours.length);
-//     for(let i = 1; i<=tours.length; i++){
-//         let plus = document.getElementById(`id_plus_${i}`);
-//         let minus = document.getElementById(`id_minus_${i}`)
-//         if(event.target === plus){
-//             CounterSum(i)
-//             return;
-//         }else{continue}
-//     }
-// }
 
 function BasketFields(basket){
-    // let result = document.getElementById('basket_info') 
     let p = document.createElement('p');
     p.classList.add('p-header_3', 'medium');
     p.textContent = 'Корзина пуста. Добавьте в корзину хотя бы один товар'
@@ -54,7 +30,6 @@ function BasketFields(basket){
 }
 
 function CreateTourCardInBasket(obj, i, basket){
-    // const basket = document.getElementById('basket_info')
     let hr_1 = document.createElement('hr')
     let tour_cont = document.createElement('div');
 
@@ -116,10 +91,6 @@ function CreateTourCardInBasket(obj, i, basket){
 
     c__counter_counter.setAttribute('id', `id_c_counter_${i}`)
     n__counter_counter.setAttribute('id', `id_n_counter_${i}`)
-
-    // name__price.setAttribute('id', `id_name_price_${i}`)
-    // counter__price.setAttribute('id', `id_counter_price_${i}`)
-
     
     c__counter_plus.onclick = function(){CounterPlus(i, obj)}
     n__counter_plus.onclick = function(){CounterPlus(i, obj)}
@@ -197,36 +168,13 @@ function DeleteHR(basket){
     basket.removeChild(hr_2)
 }
 
-
-// function CreateArrOfToursLength(){
-//     let count = 1;
-//     let max;
-//     do{
-//         count++;
-//         if(localStorage.getItem(`tour_id_${tour}`)){
-//             console.log(`tour_id_${tour}`);
-//             max = count;
-//             return true
-//         }
-//     }while(count != 10)
-// }
-
-
-
-
 function SumSum(obj, basket){
     let sum_res = document.getElementById('basket_sum');
     let sum = 0;
     for(let i = 1; i<=obj.length; i++){
         if(localStorage.getItem(`tour_id_${i}`)){
-                // let numb = obj[i-1].card_price.split(" ")
-                // if(localStorage.getItem(`tour_id_${i}`)){
-                    // sum += localStorage.getItem(`tour_price_id_${i}`) + localStorage.getItem(`tour_id_${i}`);
-                // }else{
-                sum += localStorage.getItem(`tour_price_id_${i}`) * localStorage.getItem(`tour_id_${i}`);
-                // }
+            sum += localStorage.getItem(`tour_price_id_${i}`) * localStorage.getItem(`tour_id_${i}`);
             console.log(sum);
-                // console.log(sum);
         }else{continue}
     }
         
@@ -242,8 +190,6 @@ function CounterPlus(i, obj){
     n_counter.textContent = value + 1;
 
     localStorage.setItem(`tour_id_${i}`, value + 1)
-
-    // SumSum(obj);
     BasketPlus();
     SumSum(obj);
 }
@@ -252,26 +198,25 @@ function CounterMinus(i, obj, basket){
     let c_counter = document.getElementById(`id_c_counter_${i}`)
     let n_counter = document.getElementById(`id_n_counter_${i}`)
     let value = Number(localStorage.getItem(`tour_id_${i}`));
-    // BasketMinus();
     if(localStorage.getItem(`tour_id_${i}`)-1 === 0){
-        BasketMinus();
+        BasketMinus(1);
         RemoveTour(i, obj, basket);
     }else{
         c_counter.textContent = value - 1;
         n_counter.textContent = value - 1;
 
         localStorage.setItem(`tour_id_${i}`, value - 1)
-
-        BasketMinus();
+        
+        BasketMinus(1);
         SumSum(obj, basket);
         CheckBasket(basket);
     }
 }
 
 function RemoveTour(i, obj, basket){
-    // const basket = document.getElementById('basket_info')
     let hr = document.getElementById(`hr_id_${i}`)
     let tour = document.getElementById(`b_tour_id_${i}`);
+    BasketMinus(localStorage.getItem(`tour_id_${i}`));
     localStorage.removeItem(`tour_id_${i}`)
     localStorage.removeItem(`tour_price_id_${i}`)
     basket.removeChild(hr);
@@ -284,11 +229,18 @@ function RemoveTour(i, obj, basket){
 function BasketPlus(){
     let c_bas = localStorage.getItem('basket_counter');
     c_bas++
+    BasketCounter_Head(c_bas);
     localStorage.setItem('basket_counter', c_bas) 
 }
 
-function BasketMinus(){
+function BasketMinus(num){
     let c_bas = localStorage.getItem('basket_counter');
-    c_bas -= 1
+    c_bas -= Number(num)
+    BasketCounter_Head(c_bas);
     localStorage.setItem('basket_counter', c_bas) 
+}
+
+function BasketCounter_Head(num){
+    let count = document.getElementById('counter_header')
+    count.textContent = Number(num)
 }

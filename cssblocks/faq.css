@@ -23,7 +23,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     text-align: start;
 }
 
@@ -40,4 +40,8 @@
     border-radius: 40px;
     height: 40px;
     width: 40px;
+}
+
+.q-answer{
+    margin-top: 10px;
 }

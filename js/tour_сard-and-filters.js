@@ -1,80 +1,76 @@
 let c_bas = 0;
 let id_counter=0;
 
-// let counter = document.getElementById('counter')
-// console.log(counter);
-window.onload = () =>{
-    Delete_save();
-    checkBasket();
-    let requestURL = '../json/cards-tour.json';
-    let requestURL_filter = '../json/filters-tour.json';
+Delete_save();
+checkBasket();
+let requestURL = '../json/cards-tour.json';
+let requestURL_filter = '../json/filters-tour.json';
 
-    import_json_for_cards(requestURL);
-    import_json_for_filters(requestURL_filter);
+import_json_for_cards(requestURL);
+import_json_for_filters(requestURL_filter);
 
-    async function import_json_for_cards(requestURL){
-        const request = new Request(requestURL);
-        const response = await fetch(request);
-        const cards = await response.json(); 
+async function import_json_for_cards(requestURL){
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const cards = await response.json(); 
 
-        for(let i = 0; i<cards.length; i++){
-            create_tour_card(cards, i);
-        }
+    for(let i = 0; i<cards.length; i++){
+        create_tour_card(cards, i);
     }
-    async function import_json_for_filters(requestURL){
-        const request = new Request(requestURL);
-        const response = await fetch(request);
-        const tour_filters = await response.json(); 
-        for(let i = 0; i<tour_filters.length; i++){
-            create_tour_filter(tour_filters, i);
-            create_adap_tour_filter(tour_filters, i);
-        }
-    }
-
-    window.onclick=function(event){
-        let adap_filters = document.querySelectorAll('.t-a_f_cont');
-        let tour_cards = document.querySelectorAll('.tour_card-cont');
-        for(let i = 0; i<adap_filters.length; i++){
-            let a_f_name = document.getElementById(`adap_filter_name_${i}`);
-            let a_f_block = document.getElementById(`adap_filter_block_${i}`);
-            if(event.target === a_f_name){
-                console.log(event.target);
-                if(!a_f_block.classList.contains('hide')){
-                    a_f_block.classList.add('hide');
-                }else{
-                    a_f_block.classList.remove('hide');
-                }
-            }else{continue}
-        }
-        for(let i = 1; i<=tour_cards.length; i++){
-            let tour_img_id = document.getElementById(`tour_img_id_${i}`);
-            let tour_name_id = document.getElementById(`tour_name_id_${i}`);
-            let tour_book_id = document.getElementById(`tour_book_id_${i}`);
-            let tour_details_id = document.getElementById(`tour_details_id_${i}`);
-            if(event.target === tour_img_id || event.target === tour_name_id || event.target === tour_details_id){
-                import_json_for_card_tours(requestURL, i-1)
-                window.location.href = "../html/tour-page.html";
-                // console.log(i);
-                return;
-            }
-            else if(event.target === tour_book_id){
-                import_json_for_book(requestURL, i-1)
-            }else{continue};
-        }
-    }  
-    async function import_json_for_card_tours(requestURL, num){
-        const request = new Request(requestURL);
-        const response = await fetch(request);
-        const cards = await response.json(); 
-        Save(cards, num);
-    } 
-    async function import_json_for_book(requestURL, num){
-        const request = new Request(requestURL);
-        const response = await fetch(request);
-        const cards = await response.json(); 
-        Basket(cards, num);
-    }   
 }
+async function import_json_for_filters(requestURL){
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const tour_filters = await response.json(); 
+    for(let i = 0; i<tour_filters.length; i++){
+        create_tour_filter(tour_filters, i);
+        create_adap_tour_filter(tour_filters, i);
+    }
+}
+
+window.onclick=function(event){
+    let adap_filters = document.querySelectorAll('.t-a_f_cont');
+    let tour_cards = document.querySelectorAll('.tour_card-cont');
+    for(let i = 0; i<adap_filters.length; i++){
+        let a_f_name = document.getElementById(`adap_filter_name_${i}`);
+        let a_f_block = document.getElementById(`adap_filter_block_${i}`);
+        if(event.target === a_f_name){
+            console.log(event.target);
+            if(!a_f_block.classList.contains('hide')){
+                a_f_block.classList.add('hide');
+            }else{
+                a_f_block.classList.remove('hide');
+            }
+        }else{continue}
+    }
+    for(let i = 1; i<=tour_cards.length; i++){
+        let tour_img_id = document.getElementById(`tour_img_id_${i}`);
+        let tour_name_id = document.getElementById(`tour_name_id_${i}`);
+        let tour_book_id = document.getElementById(`tour_book_id_${i}`);
+        let tour_details_id = document.getElementById(`tour_details_id_${i}`);
+            if(event.target === tour_img_id || event.target === tour_name_id || event.target === tour_details_id){
+            import_json_for_card_tours(requestURL, i-1)
+                window.location.href = "../html/tour-page.html";
+            return;
+        }
+        else if(event.target === tour_book_id){
+            import_json_for_book(requestURL, i-1)
+        }else{continue};
+    }
+}  
+async function import_json_for_card_tours(requestURL, num){
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const cards = await response.json(); 
+    Save(cards, num);
+} 
+async function import_json_for_book(requestURL, num){
+    const request = new Request(requestURL);
+    const response = await fetch(request);
+    const cards = await response.json(); 
+    Basket(cards, num);
+}   
+
 
 function create_tour_card(obj, num){
     let result = document.getElementById('card_tour_result');
@@ -161,8 +157,11 @@ function create_tour_filter(obj, num){
             let filter_b_checkbox = document.createElement('input');
             let filter_b_name = document.createElement('p');
 
-            filter_b_cont.classList.add('t_f_checkbox');
+            filter_b_cont.classList.add('t_f_checkbox', 'filter_off');
+            filter_b_cont.setAttribute('id', `t-filter_${obj[num].filter_id}_${j+1}`)
             filter_b_checkbox.setAttribute('type', 'checkbox');
+            filter_b_cont.onclick = function(){StatusFilter(obj[num].filter_id, j+1, true)};
+
 
             filter_b_name.textContent = obj[num].filters[j];
 
@@ -179,9 +178,12 @@ function create_tour_filter(obj, num){
             let filter_b_cont = document.createElement('div')
             let filter_b_name = document.createElement('p');
 
-            filter_b_cont.classList.add('t_f_c_text');
+            filter_b_cont.classList.add('t_f_c_text', 'filter_off');
 
+            filter_b_cont.setAttribute('id', `t-filter_${obj[num].filter_id}_${j+1}`)
             filter_b_name.textContent = obj[num].filters[j];
+            filter_b_cont.onclick = function(){StatusFilter(obj[num].filter_id, j+1, false)};
+
 
             filter_block.appendChild(filter_b_cont);
             filter_b_cont.appendChild(filter_b_name);
@@ -196,7 +198,7 @@ function create_adap_tour_filter(obj, num){
     let filter_block = document.createElement('div')
 ////////////////////////////////////////////////////////////////////
     filter_cont.classList.add('t-a_f_cont');
-    filter_name.classList.add('t-a_f_c_name');
+    filter_name.classList.add('t-a_f_c_name', 'blue-color');
     filter_block.classList.add('t-a_f_block-cont', 'hide')
 ////////////////////////////////////////////////////////////////////
     filter_name.setAttribute('id', `adap_filter_name_${num}`);
@@ -217,8 +219,11 @@ function create_adap_tour_filter(obj, num){
             let filter_b_checkbox = document.createElement('input');
             let filter_b_name = document.createElement('p');
 
-            filter_b_cont.classList.add('t-a_f_c_chs_checkbox');
+            filter_b_cont.classList.add('t-a_f_c_chs_checkbox', 'filter-adap_off');
             filter_b_checkbox.setAttribute('type', 'checkbox');
+            
+            filter_b_cont.setAttribute('id', `t-filter-adap_${obj[num].filter_id}_${j+1}`)
+            filter_b_cont.onclick = function(){StatusFilter(obj[num].filter_id, j+1, true)};
 
             filter_b_name.textContent = obj[num].filters[j];
 
@@ -235,17 +240,17 @@ function create_adap_tour_filter(obj, num){
             let filter_b_cont = document.createElement('div');
             let filter_b_name = document.createElement('p');
 
-            filter_b_cont.classList.add('t-a_f_c_c_cont');
-
+            filter_b_cont.classList.add('t-a_f_c_c_cont', 'filter-adap_off', 'blue-color');
+            filter_b_cont.setAttribute('id', `t-filter-adap_${obj[num].filter_id}_${j+1}`)
+            
+            filter_b_cont.onclick = function(){StatusFilter(obj[num].filter_id, j+1, false)};
             filter_b_name.textContent = obj[num].filters[j];
+            
 
             filter_block_text.appendChild(filter_b_cont);
             filter_b_cont.appendChild(filter_b_name);
         }
     }
-    ////////////////////////////////////////////////////////////////////
-    // filter_name.onclick = function(){open_adap_filter(num)};
-    ////////////////////////////////////////////////////////////////////
     let hr = document.createElement('hr');
     filter_cont.appendChild(hr);
 }
@@ -303,12 +308,13 @@ function checkBasket(){
 
 function Basket(obj, num){
     if(localStorage.getItem('basket_counter') === 0){
-        // c_bas++;
         localStorage.setItem('basket_counter', 1) 
         Book(obj, num)
+        BasketCounter_Head(1)
     }else{
         c_bas = localStorage.getItem('basket_counter');
         c_bas++;
+        BasketCounter_Head(c_bas)
         localStorage.setItem('basket_counter', c_bas) 
         Book(obj, num)
     }
@@ -316,26 +322,154 @@ function Basket(obj, num){
 
 function Book(obj, num){
     if(!localStorage.getItem(`tour_id_${obj[num].id}`)){
-        // id_counter++;
         localStorage.setItem(`tour_id_${obj[num].id}`, 1)
         if(!localStorage.getItem(`tour_price_id_${obj[num].id}`)){
             localStorage.setItem(`tour_price_id_${obj[num].id}`, obj[num].card_price_value)
-
         }
     }else{
-        // for(let i = 1; i<localStorage.getItem('basket_counter');i++){
-            // if(!localStorage.getItem(`tour_id_${obj[num].id}`+'_'+i)){
-            //     localStorage.setItem(`tour_id_${obj[num].id}`+'_'+i, obj[num].id);
-            //     console.log(true);
-            //     return;
-            // }
-        // }
         let tour_counter = localStorage.getItem(`tour_id_${obj[num].id}`);
         tour_counter++;
         localStorage.setItem(`tour_id_${obj[num].id}`, tour_counter);
         if(!localStorage.getItem(`tour_price_id_${obj[num].id}`)){
             localStorage.setItem(`tour_price_id_${obj[num].id}`, obj[num].card_price_value)
-
         }
     }
 }
+
+function StatusFilter(name, num, boolean){
+    if(boolean === true){
+        console.log('true');
+    }
+    if(boolean === false){
+        let filter = document.getElementById(`t-filter_${name}_${num}`);
+        let filter_adap = document.getElementById(`t-filter-adap_${name}_${num}`);
+        // console.log(filter);
+        if(filter.classList.contains('filter_off') || filter_adap.classList.contains('filter-adap_off')){
+            // console.log(filter);    
+            filter.classList.remove('filter_off');
+            filter.classList.add('filter_on');
+
+            filter_adap.classList.remove('filter-adap_off');
+            filter_adap.classList.add('filter-adap_on');
+        }else{
+            filter.classList.remove('filter_on');
+            filter.classList.add('filter_off')
+            filter_adap.classList.remove('filter-adap_on');
+            filter_adap.classList.add('filter-adap_off')
+        }
+        // console.log(filter);
+    }
+    if(boolean === 'one'){
+        let arr_filter = document.querySelectorAll(`.filter_one_${name}`)
+        let arr_filter_adap = document.querySelectorAll(`.filter-adap_one_${name}`)
+        for(let i = 1; i<=arr_filter.length; i++){
+            let filter = document.getElementById(`t-filter_${name}_${i}`);
+            let filter_adap = document.getElementById(`t-filter-adap_${name}_${i}`);
+            if(filter.classList.contains('filter_off') && num === i || filter_adap.classList.contains('filter-adap_off') && num === i){
+                filter.classList.remove('filter_off');
+                filter.classList.add('filter_on');
+
+                filter_adap.classList.remove('filter-adap_off');
+                filter_adap.classList.add('filter-adap_on');
+            }
+            if(filter.classList.contains('filter_on') && num != i || filter_adap.classList.contains('filter-adap_on') && num != i){
+                filter.classList.remove('filter_on');
+                filter.classList.add('filter_off')
+                
+                filter_adap.classList.remove('filter-adap_on');
+                filter_adap.classList.add('filter-adap_off')
+            }
+            if(filter.classList.contains('filter_off') && num != i || filter_adap.classList.contains('filter-adap_off') && num != i){continue}
+            if(filter.classList.contains('filter_on') && num === i || filter_adap.classList.contains('filter-adap_on') && num === i){continue}
+        }
+    }
+}
+
+function BasketCounter_Head(num){
+    let count = document.getElementById('counter_header')
+    count.textContent = Number(num)
+}
+
+function OrderList(){
+    let list = document.getElementById('ul_list_order');
+    let tringle = document.getElementById('order_tringle');
+    // console.log('bazinga');
+    if(list.classList.contains('hide')){
+        list.classList.remove('hide')
+        tringle.style.transform = "rotate(0)"
+    }
+    else if(!list.classList.contains('hide')){
+        list.classList.add('hide')
+        tringle.style.transform = "rotate(-90deg)"
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+let titleMin = document.getElementById('title_min');
+let titleMax = document.getElementById('title_max');
+
+let inputLeft = document.getElementById('input_left');
+let inputRight = document.getElementById('input_right');
+
+let dotLeft = document.getElementById('dot_left');
+let dotRight = document.getElementById('dot_right');
+
+let sliderRange = document.getElementById('slider_range');
+
+let adap_titleMin = document.getElementById('adap-title_min');
+let adap_titleMax = document.getElementById('adap-title_max');
+let adap_inputLeft = document.getElementById('adap-input_left');
+let adap_inputRight = document.getElementById('adap-input_right');
+let adap_dotLeft = document.getElementById('adap-dot_left');
+let adap_dotRight = document.getElementById('adap-dot_right');
+let adap_sliderRange = document.getElementById('adap-slider_range');
+
+function set_Left_ValueForSlider(){
+    let value = this.value;
+    let min = this.min;
+    let max = this.max;
+
+    value = Math.min(parseInt(value),
+            parseInt(inputRight.value) - 1);
+
+    let percent =((value - min) / (max - min)) * 100;
+
+    sliderRange.style.left = percent + '%';
+    adap_sliderRange.style.left = percent + '%'
+    dotLeft.style.left = percent + '%'
+    adap_dotLeft.style.left = percent + '%'
+    titleMin.innerText = value;
+    adap_titleMin.innerText = value;
+
+    // if(document.getElementById('filter_slider')){
+        // console.log(adap_sliderRange);
+    // adap_sliderRange.style.left = percent + '%'
+
+    // }
+}
+
+function set_Right_ValueForSlider(){
+    let value = this.value;
+    let min = this.min;
+    let max = this.max;
+
+    value = Math.max(parseInt(value),
+            parseInt(inputLeft.value) + 1);
+
+    let percent =((value - min) / (max - min)) * 100;
+
+    sliderRange.style.right = (100 - percent) + '%';
+    adap_sliderRange.style.right = (100 - percent) + '%'
+    dotRight.style.right = (100 - percent) + '%'
+    adap_dotRight.style.right = (100 - percent) + '%'
+    titleMax.innerText = value;
+    adap_titleMax.innerText = value;
+
+}
+
+inputLeft.addEventListener('input', set_Left_ValueForSlider);
+inputRight.addEventListener('input', set_Right_ValueForSlider);
+adap_inputLeft.addEventListener('input', set_Left_ValueForSlider);
+adap_inputRight.addEventListener('input', set_Right_ValueForSlider);
+
+////////////////////////////////////////////////////////////////////

@@ -2,11 +2,12 @@ header{
     height: 88px;
     width: 100%;
     position: fixed;
+    z-index: 10;
 }
 
 .header-container{
     background: rgb(255, 255, 255, 0.60);
-    /* backdrop-filter: blur(4px); */
+    backdrop-filter: blur(4px);
     height: 100%;
     border-radius: 0 0 40px 40px;
     display: flex;
@@ -94,11 +95,11 @@ header{
     
 }
 
-.basket-count span{
+/* .basket-count span{ */
     /* position: relative; */
     /* right: 0.1px; */
     /* top: 0.3px; */
-}
+/* } */
 
 .basket-cont a img{
     margin-bottom: 2px;

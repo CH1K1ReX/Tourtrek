@@ -23,7 +23,7 @@
         "card_price_value": 25999,
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "Горы",
         "card_category":{
             "solution": "Активные туры",
             "time": "3-5 дней",
@@ -39,7 +39,7 @@
         "card_price_value": 20000,
         "card_check_price_one": "one",
         "card_price_one": 5,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "лес лес",
         "card_category":{
             "solution": "Отдых с детьми",
             "time": "10-14 дней",
@@ -55,7 +55,7 @@
         "card_price_value": 7999,
         "card_check_price_one": "one",
         "card_price_one": 2,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "кэмп кэмп",
         "card_category":{
             "solution": ["Туры для выходного дня", "Туры для детей", "Туры для пенсионеров"],
             "time": "10-14 дней",
@@ -71,7 +71,7 @@
         "card_price_value": 31999,
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "термал",
         "card_category":{
             "solution": "Туры на термальные источники",
             "time": "1-3 дня",
@@ -87,7 +87,7 @@
         "card_price_value": 19999,
         "card_check_price_one": "animal",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "игогого",
         "card_category":{
             "solution": ["Тур с животными", "Необычные туры"],
             "time": "5-7 дней",
@@ -103,7 +103,7 @@
         "card_price_value": 9999,
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "Вкусный олень",
         "card_category":{
             "solution": "Гастрономический тур",
             "time": "1-3 дня",
@@ -119,7 +119,7 @@
         "card_price_value": 10000,
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "кавказ",
         "card_category":{
             "solution": "Обзорная",
             "time": "1-3 дня",
@@ -135,7 +135,7 @@
         "card_price_value": 12999,
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "Санкт-Петербург1231313",
         "card_category":{
             "solution": "Туры для выходного дня",
             "time": "1-3 дня",
@@ -151,7 +151,7 @@
         "card_price_value": 9999,
         "card_check_price_one": "group",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "Озеро",
         "card_category":{
             "solution": "Активные туры",
             "time": "1-3 дня",
@@ -167,7 +167,7 @@
         "card_price_value": 3999,
         "card_check_price_one": "one",
         "card_price_one": 1,
-        "card_description": "ПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадьПлощадь",
+        "card_description": "Большие горы горы",
         "card_category":{
             "solution": "Отдых с детьми",
             "time": "10-14 дней",

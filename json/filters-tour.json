@@ -1,6 +1,7 @@
 [
     {
         "filter_name": "Подборки",
+        "filter_id": "Collections",
         "checkbox_check":true,
         "filters":[
             "Активные туры", 
@@ -16,6 +17,7 @@
     },
     {
         "filter_name": "Город",
+        "filter_id": "City",
         "checkbox_check":true,
         "filters":[
             "Алтай",
@@ -31,6 +33,7 @@
     },
     {
         "filter_name": "Продолжительность",
+        "filter_id": "Time",
         "checkbox_check":false,
         "filters":[
             "1-3 дня",
@@ -41,6 +44,7 @@
     },
     {
         "filter_name": "Уровень активности",
+        "filter_id": "LevelAction",
         "checkbox_check":true,
         "filters":[
             "Активный",
